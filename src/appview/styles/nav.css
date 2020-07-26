@@ -1,0 +1,65 @@
+/* variables for colors example
+:root {
+    --card-bg: darkgray;
+}
+background-color: var(--card-bg); */
+
+:root {
+    /* --logo-background-color: #731504; */
+    --logo-background-color: #1d4db4;
+    --logo--white: #ff9aee;
+    /* --logo--white: #F7EEE8; */
+    /* --nav-font-color: #BE7C70; */
+    --nav-font-color: #f138d3;
+    /* --nav-brandy: #B88C7C; */
+    --nav-brandy: #1d4db4;
+    
+}
+
+.container > li {
+    border: .1em solid #ff9aee;
+}
+small {
+    font-size: 75%;
+  }
+/* handles the logo below */
+#logo {
+    height: 10rem;
+}
+  
+  header {
+    background-color: var(--logo-background-color);
+  }
+  
+  .site-title {
+    color: var(--logo--white);
+    text-align: center;
+  }
+  
+  nav .container {
+    display: flex;
+    padding: 0;
+    margin-bottom: 0;
+  }
+  
+  nav .container li {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: var(--logo--white);
+    box-sizing: border-box;
+    background-color: var(--nav-brandy);
+    list-style-type: none;
+  }
+  
+  .nav-link {
+    color: var(--logo--white);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  
+  .nav-link:hover {
+    color: var(--nav-font-color);
+  }

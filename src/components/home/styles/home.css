@@ -1,0 +1,10 @@
+:root {
+    --logo-background-color: #731504; 
+}
+
+
+.login-link {
+    color: var(--logo-background-color);
+    text-decoration: underline;
+    cursor: pointer;
+  }
