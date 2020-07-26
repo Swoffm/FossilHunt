@@ -5,13 +5,20 @@
 background-color: var(--card-bg); */
 
 :root {
-    --logo-background-color: #731504;
-    --logo--white: #F7EEE8;
-    --nav-font-color: #BE7C70;
-    --nav-brandy: #B88C7C;
+    /* --logo-background-color: #731504; */
+    --logo-background-color: #1d4db4;
+    --logo--white: #ff9aee;
+    /* --logo--white: #F7EEE8; */
+    /* --nav-font-color: #BE7C70; */
+    --nav-font-color: #f138d3;
+    /* --nav-brandy: #B88C7C; */
+    --nav-brandy: #1d4db4;
     
 }
 
+.container > li {
+    border: .1em solid #ff9aee;
+}
 small {
     font-size: 75%;
   }
@@ -54,5 +61,5 @@ small {
   
   
   .nav-link:hover {
-    color: var(--logo-background-color);
+    color: var(--nav-font-color);
   }
