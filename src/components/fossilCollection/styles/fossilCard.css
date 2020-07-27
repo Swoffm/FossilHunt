@@ -1,0 +1,20 @@
+.fossilParent {
+border: 3px solid royalblue;
+display: flex; 
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.fossilCard {
+border: 3px solid pink;
+padding: .5em .9em;
+margin: 1em 0;
+width: 25%;
+
+}
+
+.deleteButton, .detailsEdit, .detailsButton{
+    background-color: rgb(113, 147, 248);
+    color: pink;
+    width: 100%;;
+}
+

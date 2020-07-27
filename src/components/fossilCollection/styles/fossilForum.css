@@ -1,0 +1,14 @@
+.fossilForum > fieldset {
+    border: .3em solid royalblue;
+    
+}
+.fossilForum > .formgrid {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.formChild {
+    text-align: center;
+    margin: .3em 0;
+    padding: .5em 0;
+}
