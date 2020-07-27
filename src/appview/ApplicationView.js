@@ -1,9 +1,14 @@
-import React from "react";
+import React, { Component } from "react";
 import { Route, Redirect } from "react-router-dom";
 import Home from "../components/home/Home"
+
+// importing fossilcollection Components
+import FossilCollectionForum from "../components/fossilCollection/FossilCollectionForum"
 import FossilCollection from "../components/fossilCollection/FossilCollection"
 
 const ApplicationView = () => {
+    let hasUser = true;
+
     return (
     <React.Fragment>
 
@@ -22,7 +27,19 @@ const ApplicationView = () => {
             exact
             path="/fossilcollection"
             render={props => {
-                    return <FossilCollection {...props} />
+                
+                    if(hasUser) {return <FossilCollection {...props} />
+            }
+            else { return <Home {...props} />}
+            }}
+        />
+
+        {/* below is the component for fossil forum */}
+        <Route
+            exact
+            path="/newfossil"
+            render={props => {
+                    return <FossilCollectionForum {...props} />
             }}
         />
 

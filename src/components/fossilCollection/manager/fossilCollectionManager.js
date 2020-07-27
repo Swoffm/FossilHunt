@@ -8,6 +8,15 @@ const fossilCollectionManager = {
           return fetch(`${url}/fossilCollection/${id}`, {
               method: "DELETE"
           }).then(result => result.json())
+      },
+      post(fossil) {
+          return fetch(`${url}/fossilCollection`, {
+            method: "POST",
+            headers: {
+        "Content-Type": "application/json"
+            },
+            body: JSON.stringify(fossil)
+          }).then(data => data.json())
       }
 }
 

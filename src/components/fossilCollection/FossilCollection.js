@@ -28,6 +28,9 @@ const FossilCollection = (props) => {
 
     return (
         <>
+        <div>
+            <button onClick={() => {props.history.push("/newfossil")}}>Add</button>
+            </div>
         <section className="fossilParent">
         {fossil.map(element => element.userId == UserId ? <FossilCollectionJSX key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
         </section>
