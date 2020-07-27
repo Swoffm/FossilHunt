@@ -2,6 +2,8 @@ import React from "react";
 import { useState} from 'react';
 import fossilCollectionManager from "./manager/fossilCollectionManager"
 import FossilCollectionForumJSX from "./pages/FossilCollectionForumJSX"
+import "./styles/fossilForum.css"
+
 
 const FossilCollectionForum = (props) => {
     // =======================change below===========

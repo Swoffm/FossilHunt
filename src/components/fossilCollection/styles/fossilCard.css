@@ -8,10 +8,13 @@ justify-content: space-evenly;
 border: 3px solid pink;
 padding: .5em .9em;
 margin: 1em 0;
+width: 25%;
 
 }
 
-.deleteButton {
+.deleteButton, .detailsEdit, .detailsButton{
     background-color: rgb(113, 147, 248);
     color: pink;
+    width: 100%;;
 }
+

@@ -3,9 +3,10 @@ import React from "react";
 
 const FossilCollectionForumJSX = (props) => {
 
-    return (<form>
+    return (<form className="fossilForum">
         <fieldset>
             <div className="formgrid">
+                <div className="formChild">
                 <label htmlFor="name">Name: </label>
                 <input
                     type="text"
@@ -13,8 +14,9 @@ const FossilCollectionForumJSX = (props) => {
                     onChange={props.handleFieldChange}
                     id="genus"
                     placeholder="Enter Genus Name"
-                />
+                /></div>
 
+            <div className="formChild">
 
                 <label htmlFor="name">Geological Time Period: </label>
                 <input
@@ -23,8 +25,10 @@ const FossilCollectionForumJSX = (props) => {
                     onChange={props.handleFieldChange}
                     id="timeperiod"
                     placeholder="Time Period"
-                />
+                /></div>
 
+
+            <div className="formChild">
 
                 <label htmlFor="name">Rock Type: </label>
                 <input
@@ -33,8 +37,11 @@ const FossilCollectionForumJSX = (props) => {
                     onChange={props.handleFieldChange}
                     id="rockType"
                     placeholder="What type of rock was the fossil found in"
-                />
+                /></div>
 
+
+
+            <div className="formChild">
 
                 <label htmlFor="name">Location: </label>
                 <input
@@ -43,7 +50,10 @@ const FossilCollectionForumJSX = (props) => {
                     onChange={props.handleFieldChange}
                     id="location"
                     placeholder="Location of the fossil"
-                />
+                /></div>
+
+
+            <div className="formChild">
 
                 <label htmlFor="name">Upload Fossil Image: </label>
                 <input
@@ -51,22 +61,22 @@ const FossilCollectionForumJSX = (props) => {
                     required
                     onChange={props.handleFieldChange}
                     id="image"
-                   
+
                 />
-
+            </div>
 
 
 
             </div>
-            <div className="alignRight">
-                <button
-                    type="button"
-                    disabled={props.isLoading}
-                    onClick={props.newFossil}
-                >Submit</button>
-            </div>
+        <div className="formChild">
+            <button
+                type="button"
+                disabled={props.isLoading}
+                onClick={props.newFossil}
+            >Submit</button>
+        </div>
         </fieldset>
-    </form>)
+    </form >)
 }
 
 export default FossilCollectionForumJSX

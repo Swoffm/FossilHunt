@@ -17,6 +17,9 @@ const fossilCollectionManager = {
             },
             body: JSON.stringify(fossil)
           }).then(data => data.json())
+      },
+      get(id) {
+        return fetch(`${url}/fossilCollection/${id}`).then(result => result.json())
       }
 }
 

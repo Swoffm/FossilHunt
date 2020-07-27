@@ -5,45 +5,67 @@ import Home from "../components/home/Home"
 // importing fossilcollection Components
 import FossilCollectionForum from "../components/fossilCollection/FossilCollectionForum"
 import FossilCollection from "../components/fossilCollection/FossilCollection"
+import FossilCollectionDetails from "../components/fossilCollection/FossilCollectionDetails"
+import FossilEditForum from "../components/fossilCollection/FossilCollectionEditForum"
+
+
 
 const ApplicationView = () => {
     let hasUser = true;
 
     return (
-    <React.Fragment>
+        <React.Fragment>
 
-        {/* below is the landing page */}
-        <Route
-            exact
-            path="/"
-            render={props => {
+            {/* below is the landing page */}
+            <Route
+                exact
+                path="/"
+                render={props => {
                     return <Home {...props} />
-            }}
-        />
+                }}
+            />
 
-        {/* below is the component for fossil collection */}
+            {/* below is the component for fossil collection */}
 
-        <Route
-            exact
-            path="/fossilcollection"
-            render={props => {
-                
-                    if(hasUser) {return <FossilCollection {...props} />
-            }
-            else { return <Home {...props} />}
-            }}
-        />
+            <Route
+                exact
+                path="/fossilcollection"
+                render={props => {
 
-        {/* below is the component for fossil forum */}
-        <Route
-            exact
-            path="/newfossil"
-            render={props => {
+                    if (hasUser) {
+                        return <FossilCollection {...props} />
+                    }
+                    else { return <Home {...props} /> }
+                }}
+            />
+
+            {/* below is the component for fossil forum */}
+            <Route
+                exact
+                path="/fossilcollection/new"
+                render={props => {
                     return <FossilCollectionForum {...props} />
-            }}
-        />
+                }}
+            />
 
-    </React.Fragment>
+            {/* below is the details for fossil collection */}
+            <Route
+                exact
+                exact path="/fossilDetails/:fossilId(\d+)"
+                render={props => {
+                    return <FossilCollectionDetails {...props} />
+                }}
+            />
+
+            <Route
+                exact
+                exact path="/fossilEdit/:fossilId(\d+)"
+                render={props => {
+                    return <FossilEditForum {...props} />
+                }}
+            />
+
+        </React.Fragment>
     )
 }
 
