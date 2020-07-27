@@ -5,6 +5,7 @@ import "./styles/nav.css"
 
 
 const Nav = () => {
+    let hasUser = true;
     return (
         <header >
             <div className="logo">
@@ -20,6 +21,9 @@ const Nav = () => {
                             Home
                         </Link>
                     </li>
+                    {
+                        hasUser ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
+                    }
                     <li>
                         <Link className="nav-link" to="/login">
                             Log In
