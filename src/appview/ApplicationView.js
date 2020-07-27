@@ -57,8 +57,9 @@ const ApplicationView = () => {
                 }}
             />
 
+            {/* below is the fossil edit */}
+
             <Route
-                exact
                 exact path="/fossilEdit/:fossilId(\d+)"
                 render={props => {
                     return <FossilEditForum {...props} />

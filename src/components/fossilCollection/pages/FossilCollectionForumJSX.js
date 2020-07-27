@@ -7,7 +7,7 @@ const FossilCollectionForumJSX = (props) => {
         <fieldset>
             <div className="formgrid">
                 <div className="formChild">
-                <label htmlFor="name">Name: </label>
+                <label htmlFor="genus">Name: </label>
                 <input
                     type="text"
                     required
@@ -18,7 +18,7 @@ const FossilCollectionForumJSX = (props) => {
 
             <div className="formChild">
 
-                <label htmlFor="name">Geological Time Period: </label>
+                <label htmlFor="timeperiod">Geological Time Period: </label>
                 <input
                     type="text"
                     required
@@ -30,7 +30,7 @@ const FossilCollectionForumJSX = (props) => {
 
             <div className="formChild">
 
-                <label htmlFor="name">Rock Type: </label>
+                <label htmlFor="rockType">Rock Type: </label>
                 <input
                     type="text"
                     required
@@ -43,7 +43,7 @@ const FossilCollectionForumJSX = (props) => {
 
             <div className="formChild">
 
-                <label htmlFor="name">Location: </label>
+                <label htmlFor="location">Location: </label>
                 <input
                     type="text"
                     required
