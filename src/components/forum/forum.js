@@ -24,7 +24,7 @@ getQuestion();
     return (
     <>
     <section className="forumParent">
-        {hasUser ? <button className="addbtn">Add</button>:null}
+        {hasUser ? <button className="addbtn" onClick={() => {props.history.push("/forum/new")}}>Add</button>:null}
     {question.map(element => <ForumJSX key={element.id} question={element} {...props}/>)}
     </section>
     </>)

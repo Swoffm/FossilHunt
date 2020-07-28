@@ -3,7 +3,7 @@ import React from "react"
 
 const ForumJSX = props => {
 const name = props.question
-console.log(name)
+
     return (<>
     <section className="questionChild">
         <div>

@@ -1,0 +1,19 @@
+.parentQForum > form > fieldset {
+    border: .3em solid royalblue;
+}
+
+.parentQForum > form > h1 {
+    text-align: center;
+    color: pink;
+}
+
+.parentQForum > form {
+    color: pink;
+}
+
+.submitbtn {
+    color: pink;
+    background-color: royalblue;
+    width: 15%;
+    font-size: 50%;
+}
