@@ -8,17 +8,29 @@ const Nav = () => {
     let hasUser = true;
     return (
         <header >
+            <div className="logoParent">
             <div className="logo">
-            {/* <Link className="nav-link" to="/">
-            <img id="logo" src="https://res.cloudinary.com/fossilhunt/image/upload/v1595625573/IMG_4891_mofnwm.jpg" alt="Fossil Hunt Logo"/>
+            <Link className="nav-link" to="/">
+            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/g_auto,r_max,bo_5px_solid_white,b_rgb:000/v1595953152/logo_o7omlv.jpg" alt="Fossil Hunt Logo"/>
 
-                        </Link> */}
+                        </Link>
+             </div>
+             {/* https://res.cloudinary.com/drcnakesm/image/upload/v1595887981/Untitled_design_8_dxrh78.png */}
+             <div className="mainlogo">
+             <img id="mainlogo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1595954432/Untitled_design_8_dxrh78.png" alt="Fossil Hunt Logo"/>
+        
+             </div>
              </div>
             <nav>
                 <ul className="container">
                 <li>
                         <Link className="nav-link" to="/">
                             Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link className="nav-link" to="/forum">
+                            Fossil Forum
                         </Link>
                     </li>
                     {

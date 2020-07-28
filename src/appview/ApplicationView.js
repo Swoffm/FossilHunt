@@ -8,6 +8,9 @@ import FossilCollection from "../components/fossilCollection/FossilCollection"
 import FossilCollectionDetails from "../components/fossilCollection/FossilCollectionDetails"
 import FossilEditForum from "../components/fossilCollection/FossilCollectionEditForum"
 
+//import Forum Components
+import Forum from "../components/forum/forum"
+import ForumNew from "../components/forum/forumNew"
 
 
 const ApplicationView = () => {
@@ -65,6 +68,27 @@ const ApplicationView = () => {
                     return <FossilEditForum {...props} />
                 }}
             />
+
+
+            {/* below is to display all the questions on the forum */}
+
+            <Route
+                exact
+                path="/forum"
+                render={props => {
+                        return <Forum {...props} /> 
+                }}
+            />
+
+            {/* below is to display a new question to the forum */}
+            <Route
+                exact
+                path="/forum/new"
+                render={props => {
+                        return <ForumNew {...props} /> 
+                }}
+            />
+
 
         </React.Fragment>
     )

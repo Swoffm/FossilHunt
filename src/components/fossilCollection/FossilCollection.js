@@ -4,7 +4,7 @@ import fossilCollectionManager from "./manager/fossilCollectionManager"
 import "./styles/fossilCard.css"
 
 const FossilCollection = (props) => {
-
+// ====================change userId Below ============
     const UserId = 1;
 
     const [fossil, setFossil] = useState([])
