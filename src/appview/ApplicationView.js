@@ -11,7 +11,7 @@ import FossilEditForum from "../components/fossilCollection/FossilCollectionEdit
 //import Forum Components
 import Forum from "../components/forum/forum"
 import ForumNew from "../components/forum/forumNew"
-
+import ForumQuestionDetails from "../components/forum/forumQuestionDetails"
 
 const ApplicationView = () => {
     let hasUser = true;
@@ -86,6 +86,14 @@ const ApplicationView = () => {
                 path="/forum/new"
                 render={props => {
                         return <ForumNew {...props} /> 
+                }}
+            />
+
+<Route
+                exact
+                exact path="/forumQuestion/:questionId(\d+)"
+                render={props => {
+                    return <ForumQuestionDetails {...props} />
                 }}
             />
 
