@@ -21,6 +21,11 @@ const Nav = () => {
                             Home
                         </Link>
                     </li>
+                    <li>
+                        <Link className="nav-link" to="/forum">
+                            Fossil Forum
+                        </Link>
+                    </li>
                     {
                         hasUser ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
                     }

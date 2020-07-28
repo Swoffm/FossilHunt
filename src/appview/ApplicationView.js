@@ -8,7 +8,8 @@ import FossilCollection from "../components/fossilCollection/FossilCollection"
 import FossilCollectionDetails from "../components/fossilCollection/FossilCollectionDetails"
 import FossilEditForum from "../components/fossilCollection/FossilCollectionEditForum"
 
-
+//import Forum Components
+import Forum from "../components/forum/forum"
 
 const ApplicationView = () => {
     let hasUser = true;
@@ -65,6 +66,18 @@ const ApplicationView = () => {
                     return <FossilEditForum {...props} />
                 }}
             />
+
+
+            {/* below is to display all the questions on the forum */}
+
+            <Route
+                exact
+                path="/forum"
+                render={props => {
+                        return <Forum {...props} /> 
+                }}
+            />
+
 
         </React.Fragment>
     )
