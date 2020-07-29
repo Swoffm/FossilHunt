@@ -16,7 +16,16 @@ const ForumManager = {
       questionWithResponses(id) {
           return fetch(`${url}/questions/${id}?_embed=responses`)
           .then(result => result.json())
-      }
+      },
+      post(response) {
+        return fetch(`${url}/responses`, {
+          method: "POST",
+          headers: {
+      "Content-Type": "application/json"
+          },
+          body: JSON.stringify(response)
+        }).then(data => data.json())
+    }
 }
 
 export default ForumManager

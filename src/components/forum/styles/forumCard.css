@@ -9,3 +9,9 @@
     padding-left: .2em;
     margin: .5em 0;
 }
+
+
+ .responseChild {
+    border: .1em solid royalblue; 
+    margin: .5em;
+}

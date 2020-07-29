@@ -2,6 +2,9 @@ import React, { useEffect, useState } from "react"
 import ForumQuestionDetailsJSX from "./pages/forumQuestionDetailsJSX"
 import ForumManager from "./manager/ForumManager"
 import ResponseJSX from "./pages/ResponseJSX"
+import { Link } from "react-router-dom";
+
+
 
 
 const ForumQuestionDetails = props => {
@@ -23,10 +26,12 @@ const ForumQuestionDetails = props => {
 
     useEffect(() => {
         getQuestionAndResponse()
-    }, [])
+    }, []) 
 
     return (<>
-        <div className="parent">
+        <div className="FossilResponse_parent">
+       <Link to={`/forumResponse/${props.match.params.questionId}/new`}><button>Respond</button> </Link>
+            {/* <button onClick={() => {props.history.push(`forumResponse/${props.match.params.questionId}/new`)}}>Respond</button> */}
             <section>
 
                 <ForumQuestionDetailsJSX question={question} {...props} />
