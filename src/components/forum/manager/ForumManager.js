@@ -2,10 +2,10 @@
 const url = "http://localhost:5002"
 const ForumManager = {
     getAll() {
-        return fetch(`${url}/forum`).then(result => result.json())
+        return fetch(`${url}/questions`).then(result => result.json())
       },
       post(question) {
-          return fetch(`${url}/forum`, {
+          return fetch(`${url}/questions`, {
               method: "POST",
               headers: {
                   "Content-Type": "application/json"
