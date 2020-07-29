@@ -9,6 +9,9 @@ const Home = (props) => {
     return (
         <>
         <section>
+            <div className="banner">
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596048818/Ivory_and_Ash_Grey_Photo_DIY_Influencer_Minimalist_Facebook_Cover_twfddg.png" alt="picture of a young man holding a fossil" />
+            </div>
             <h1>Welcome to Fossil Hunt</h1>
             <p>Fossil Hunt is a website for fossil collectors. Fossil Hunt supplies collectors with the ability to keep track of their fossils and communicate with other fossil hunters.</p>
         </section>
