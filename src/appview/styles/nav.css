@@ -6,13 +6,13 @@ background-color: var(--card-bg); */
 
 :root {
     /* --logo-background-color: #731504; */
-    --logo-background-color: #1d4db4;
-    --logo--white: #ff9aee;
+    --logo-background-color: black;
+    --logo--white: white;
     /* --logo--white: #F7EEE8; */
     /* --nav-font-color: #BE7C70; */
-    --nav-font-color: #f138d3;
+    --nav-font-color: white;
     /* --nav-brandy: #B88C7C; */
-    --nav-brandy: #1d4db4;
+    --nav-brandy: black;
     
 }
 /* below is the styling for the logo image */
@@ -21,9 +21,21 @@ background-color: var(--card-bg); */
   flex-wrap: wrap;
   align-content: center;
 }
+#logo:hover {
+  border: .2em solid white;
+
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
 #logo {
-  height: 7em;
-  flex:  1;
+  height: 13em;
+  border: .2em solid black;
+  border-radius: 50%;
+  
   margin-top: 2em;
   margin-left: 2em;
 }

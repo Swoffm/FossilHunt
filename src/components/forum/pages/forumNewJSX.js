@@ -11,13 +11,13 @@ const ForumNewJSX = props => {
     <fieldset>
         <div className="formgrid">
             <div className="formChild">
-            <label htmlFor="genus">Question: </label>
+            <label htmlFor="question">Question: </label>
             <input 
                 type="text"
                 required
                 onChange={props.handleFieldChange}
                 id="question"
-                placeholder="Enter Genus Name"
+                placeholder="Enter a Question"
             /></div>
 
         <div className="formChild">
@@ -28,7 +28,7 @@ const ForumNewJSX = props => {
                 required
                 onChange={props.handleFieldChange}
                 id="location"
-                placeholder="Time Period"
+                placeholder="Enter a Location"
             /></div>
 
         </div>
@@ -42,7 +42,8 @@ const ForumNewJSX = props => {
     </fieldset>
 </form >
 
-</>)
+</>
+)
 }
 
 export default ForumNewJSX

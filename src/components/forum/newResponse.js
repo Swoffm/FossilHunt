@@ -5,9 +5,9 @@ const NewResponse = props => {
 
       // =======================change below===========
       const userId = 1;
-    console.log(props.match.params.questionId)
 
-    const [response, setResponse] = useState({userId: userId, response: "", formQuestionId: props.match.params.questionId})
+
+    const [response, setResponse] = useState({userId: userId, response: "", questionId: parseInt(props.match.params.questionId)})
     const [isLoading, setIsLoading] = useState(false);
 
 
@@ -26,13 +26,16 @@ const NewResponse = props => {
        else {
            setIsLoading(true);
                 //goe back goes back to the previous page
-           ForumManager.post(response).then(()=> props.history.goBack())
+           ForumManager.responsePost(response).then(()=> props.history.push(`/forumQuestion/${props.match.params.questionId}`))
        }
+    }
+    const backBtn = () => {
+        props.history.goBack()
     }
 
 
     return (<>
-    <NewResponseJSX {...props} />
+    <NewResponseJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newResponse={newResponse} {...props} />
     </>)
 }
 

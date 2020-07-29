@@ -17,7 +17,7 @@ const ForumManager = {
           return fetch(`${url}/questions/${id}?_embed=responses`)
           .then(result => result.json())
       },
-      post(response) {
+      responsePost(response) {
         return fetch(`${url}/responses`, {
           method: "POST",
           headers: {

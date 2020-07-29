@@ -19,6 +19,7 @@ const name = props.question
     </section>
    
     </>)
+    
 }
 
 

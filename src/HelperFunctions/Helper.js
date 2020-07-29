@@ -1,3 +1,10 @@
-const backBtn = () => {
-    props.history.goBack()
-}
+
+
+// const Helper = {
+//     backBtn(props) {
+//     props.history.goBack()
+
+//     }
+// }
+
+// export default Helper
