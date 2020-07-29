@@ -12,6 +12,10 @@ const ForumManager = {
               },
               body: JSON.stringify(question)
           }).then(data => data.json())
+      }, 
+      questionWithResponses(id) {
+          return fetch(`${url}/questions/${id}?_embed=responses`)
+          .then(result => result.json())
       }
 }
 
