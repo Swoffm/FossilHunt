@@ -25,6 +25,9 @@ const ForumManager = {
           },
           body: JSON.stringify(response)
         }).then(data => data.json())
+    },
+    get(id) {
+        return fetch(`${url}/questions/${id}`).then(result => result.json())
     }
 }
 

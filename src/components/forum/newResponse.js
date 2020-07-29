@@ -6,6 +6,7 @@ const NewResponse = props => {
       // =======================change below===========
       const userId = 1;
 
+      const [question, setQuestion] = useState([])
 
     const [response, setResponse] = useState({userId: userId, response: "", questionId: parseInt(props.match.params.questionId)})
     const [isLoading, setIsLoading] = useState(false);
@@ -17,6 +18,17 @@ const NewResponse = props => {
         setResponse(stateToChange)
 
     }
+
+    const getQuestion = (id) => {
+        ForumManager.get(id).then((results) => {
+             setQuestion(results)
+           
+           
+        })
+    }
+
+    
+
 
     const newResponse = evt => {
         evt.preventDefault()
@@ -33,9 +45,11 @@ const NewResponse = props => {
         props.history.goBack()
     }
 
-
+    useEffect(()=> {
+        getQuestion(parseInt(props.match.params.questionId))
+    }, [])
     return (<>
-    <NewResponseJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newResponse={newResponse} {...props} />
+    <NewResponseJSX backBtn={backBtn} question={question} handleFieldChange={handleFieldChange} newResponse={newResponse} {...props} />
     </>)
 }
 

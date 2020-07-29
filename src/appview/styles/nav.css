@@ -18,8 +18,10 @@ background-color: var(--card-bg); */
 /* below is the styling for the logo image */
 .logoParent {
   display: flex;
-  flex-wrap: wrap;
+  height: 100%;
   align-content: center;
+  /* flex-wrap: wrap; */
+ 
 }
 #logo:hover {
   border: .2em solid white;
@@ -27,16 +29,15 @@ background-color: var(--card-bg); */
 }
 
 .logo {
-  display: flex;
+  height: 100%;
+ flex: 1;
   width: 100%;
   justify-content: center;
 }
 #logo {
-  height: 13em;
+  height: 5em;
   border: .2em solid black;
-  border-radius: 50%;
-  
-  margin-top: 2em;
+  margin-top: 1em;
   margin-left: 2em;
 }
 .mainlogo {
@@ -49,20 +50,19 @@ background-color: var(--card-bg); */
   height: 10em;
   text-align: center;
 }
+nav {
+  flex: 2;
+}
 
 
 .container > li {
-    /* border: .1em solid #ff9aee; */
+  
     border: .1em solid rgb(0, 0, 0);
 
 }
 small {
     font-size: 75%;
   }
-/* handles the logo below */
-/* #logo {
-    height: 10rem;
-} */
   
   header {
     background-color: black;
@@ -81,7 +81,9 @@ small {
   
   nav .container li {
     flex: 1;
-    padding: 10px;
+  margin-top: 1em;
+
+ 
     text-align: center;
     font-size: 1.5em;
     color: var(--logo--white);
@@ -100,3 +102,6 @@ small {
   .nav-link:hover {
     color: var(--nav-font-color);
   }
+
+
+  /* ==============================ADD MEDIA BELOW FONT SIZE IS IMPORTANT ============ */
