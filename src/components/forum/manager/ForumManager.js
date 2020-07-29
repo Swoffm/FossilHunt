@@ -14,7 +14,7 @@ const ForumManager = {
           }).then(data => data.json())
       }, 
       questionWithResponses(id) {
-          return fetch(`${url}/forum/${id}?_embed=response`)
+          return fetch(`${url}/questions/${id}?_embed=responses`)
           .then(result => result.json())
       }
 }
