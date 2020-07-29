@@ -15,6 +15,14 @@ import ForumQuestionDetails from "../components/forum/forumQuestionDetails"
 import NewResponse from "../components/forum/newResponse"
 
 
+// import login components below
+import Login from "../components/login/Login"
+import { BrowserRouter as Router } from "react-router-dom";
+import ReactDOM from 'react-dom';
+
+
+
+
 const ApplicationView = () => {
     let hasUser = true;
 
@@ -107,10 +115,21 @@ const ApplicationView = () => {
                 }}
             />
 
-          
+
+            {/* below here are where the login routes go */}
+
+            <Route
+                exact
+                path="/login"
+                render={props => {
+                    return( <Login {...props} />
+                    )
+                }}
+            />
 
 
         </React.Fragment>
+        
     )
 }
 

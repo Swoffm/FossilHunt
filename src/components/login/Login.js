@@ -1,10 +1,17 @@
 import LoginJSX from "./DOM/LoginJSX"
+import React from "react"
+
+const Login = (props) => {
 
 
-const Login = () => {
 
 
-    return (LoginJSX)
+
+    return (
+        <>
+<LoginJSX {...props} />
+        </>
+    )
 }
 
 

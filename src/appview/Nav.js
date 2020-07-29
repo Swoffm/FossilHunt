@@ -11,15 +11,10 @@ const Nav = () => {
             <div className="logoParent">
                 <div className="logo">
                     <Link className="nav-link" to="/">
-                        {/* <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596046742/The_Hunt_wrgtmv.png" alt="Fossil Hunt Logo"/> */}
                         <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596054493/The_Hunt_t90gdj.jpg" alt="Fossil Hunt Logo" />
 
                     </Link>
-                </div>
-                {/* https://res.cloudinary.com/drcnakesm/image/upload/v1595887981/Untitled_design_8_dxrh78.png */}
-                
-                    {/* <img id="mainlogo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1595954432/Untitled_design_8_dxrh78.png" alt="Fossil Hunt Logo"/> */}
-                    <nav>
+                </div> <nav>
                         <ul className="container">
                             <li>
                                 <Link className="nav-link" to="/">
