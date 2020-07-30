@@ -6,13 +6,16 @@ import AccountManager from "./manager/AccountManager"
 const Account = props => {
 
 let userId = Helper.getUserId()
-const [user, setUser] = useState([])
+    const [isLoading, setIsLoading] = useState(false);
+    const [user, setUser] = useState([])
 
     const getUser = id => {
         AccountManager.get(id).then((results) => {
             setUser(results)
         })
     }
+
+
 
     useEffect(() => {
         getUser(userId)

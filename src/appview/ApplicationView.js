@@ -22,6 +22,7 @@ import Helper from "../HelperFunctions/Helper"
 
 //import account components
 import Account from "../components/accountInformation/Account"
+import AccountEdit from "../components/accountInformation/accountEdit"
 
 
 
@@ -150,6 +151,15 @@ const ApplicationView = (props) => {
                 path="/account"
                 render={props => {
                     return (<Account {...props} />
+                    )
+                }}
+            />
+
+            <Route
+                exact
+                path="/account/edit"
+                render={props => {
+                    return (<AccountEdit {...props} />
                     )
                 }}
             />
