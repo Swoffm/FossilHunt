@@ -16,15 +16,7 @@ const LoginJSX = (props) => {
                     <div className="formgrid">
                         <h1>Log In</h1>
 
-                        <div className="formChild">
-                            <label htmlFor="question">Email </label>
-                            <input className="login--input"
-                                type="text"
-                                required
-                                // onChange={props.handleFieldChange}
-                                id="email"
-                                placeholder="Enter Your Email"
-                            /></div>
+                        
 
                         <div className="formChild">
                             <label htmlFor="question">Username </label>
@@ -47,16 +39,6 @@ const LoginJSX = (props) => {
                                 placeholder="Enter a Question"
                             /></div>
 
-                        <div className="formChild">
-
-                            <label htmlFor="location">Confirm Password </label>
-                            <input className="login--input"
-                                type="text"
-                                required
-                                // onChange={props.handleFieldChange}
-                                id="location"
-                                placeholder="Enter a Location"
-                            /></div>
 
                     </div>
                     <div className="formChild">
