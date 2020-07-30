@@ -1,11 +1,29 @@
 import React, { useEffect, useState } from "react"
 import Helper from "../../HelperFunctions/Helper"
 import AccountJSX from "./pages/AccountJSX"
+import AccountManager from "./manager/AccountManager"
 
 const Account = props => {
 
+let userId = Helper.getUserId()
+const [user, setUser] = useState([])
 
-    return(<AccountJSX {...props}/>)
+    const getUser = id => {
+        AccountManager.get(id).then((results) => {
+            setUser(results)
+        })
+    }
+
+    useEffect(() => {
+        getUser(userId)
+    }, [])
+
+
+    return(
+        <section className="accountParent"> 
+        <AccountJSX user={user} {...props}/>
+        </section>
+   )
 }
 
 export default Account
