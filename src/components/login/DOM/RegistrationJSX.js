@@ -32,7 +32,7 @@ const RegistrationJSX = props => {
                         required
                          onChange={props.handleFieldChange}
                         id="username"
-                        placeholder="Enter a Question"
+                        placeholder="Enter a Username"
                     /></div>
 
 
@@ -43,7 +43,7 @@ const RegistrationJSX = props => {
                         required
                         onChange={props.handleFieldChange}
                         id="password"
-                        placeholder="Enter a Question"
+                        placeholder="Enter a Password"
                     /></div>
 
                 <div className="formChild">
@@ -54,7 +54,7 @@ const RegistrationJSX = props => {
                         required
                         onChange={props.handleFieldChange}
                         id="conPassword"
-                        placeholder="Enter a Location"
+                        placeholder="Confirm Password"
                     /></div>
 
             </div>

@@ -26,14 +26,13 @@ const Registration = (props) => {
         // let gunna = users.map(element => (element.email == "gavinswofford@gmail.com"))
        
         let check = users.some((element) => element.username === userInfo.username)
-        console.log(check)
       
         return check
     }
 
     const checkEmail = () => {
         let check = users.some((element) => element.email === userInfo.email)
-      console.log(check)
+      
         return check
     }
 
@@ -73,18 +72,7 @@ const Registration = (props) => {
                 password: userInfo.password
             }
 
-             
-            
-
-
-            
             LoginManager.post(user).then(() => props.history.push("/login"))
-
-            // sessionStorage.setItem(
-            //     "userInfo",
-            //     JSON.stringify(userInfo)
-            // );
-            // props.history.push("/login");
         }
     }
 

@@ -22,7 +22,8 @@ import Registration from "../components/login/Registration"
 
 
 
-const ApplicationView = () => {
+const ApplicationView = (props) => {
+    console.log(props.setUser)
     let hasUser = true;
 
     return (
@@ -121,7 +122,7 @@ const ApplicationView = () => {
                 exact
                 path="/login"
                 render={props => {
-                    return (<Login {...props} />
+                    return (<Login setUser={props.setUser} {...props} />
                     )
                 }}
             />

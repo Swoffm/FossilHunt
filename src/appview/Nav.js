@@ -4,8 +4,8 @@ import "./styles/nav.css"
 
 
 
-const Nav = () => {
-    let hasUser = true;
+const Nav = (props) => {
+    let haasUser = true;
     return (
         <header>
             <div className="logoParent">
@@ -27,7 +27,7 @@ const Nav = () => {
                         </Link>
                             </li>
                             {
-                                hasUser ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
+                                haasUser ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
                             }
                             <li>
                                 <Link className="nav-link" to="/login">

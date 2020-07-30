@@ -7,7 +7,7 @@ import LoginManager from "./manager/LoginManager"
 const Login = (props) => {
 
 
-    const [userInfo, setUserInfo] = useState({ email: "", password: "" });
+    const [userInfo, setUserInfo] = useState({ username: "", password: "" });
     const [users, setUsers] = useState([])
 
     const handleFieldChange = evt => {
@@ -16,19 +16,33 @@ const Login = (props) => {
         setUserInfo(stateToChange);
     }
 
-    const handleLogin = (element) => {
-        element.preventDefault();
 
+    //this checks to see if login matches login inofrmation in the database
+    const loginCheck = () => {
+        let username = users.some(element => element.username === userInfo.username)
+        let userPassword = users.some(element => element.password === userInfo.password)
+        
 
-        sessionStorage.setItem(
-            "credentials",
-            JSON.stringify(userInfo)
-        );
-        props.history.push("/login");
+        if(!username || !userPassword) {
+            window.alert("username or password is incorrect")
+        }
+        else {
+            let userCheck = users.map(element => (element.username === userInfo.username) ? {username: element.username, userId: element.userId}: false )
+            if(userCheck) {
+                let user = {username: userCheck[0].username, userId: userCheck[0].userId}
+                sessionStorage.setItem("userInfo", JSON.stringify(user));
+              
+                props.history.push("/")
+            }
+}
+
+        
+        
     }
+
     const getUsers = () => {
         LoginManager.getAll().then((results) => {
-            setUsers(results.map(element => ({email: element.email, username: element.username})))
+            setUsers(results.map(element => ({password: element.password, username: element.username, userId: element.id})))
         })
     }
 
@@ -43,7 +57,7 @@ const Login = (props) => {
 
     return (
         <>
-            <LoginJSX {...props} />
+            <LoginJSX handleFieldChange={handleFieldChange} loginCheck={loginCheck} {...props} />
         </>
     )
 }

@@ -23,20 +23,20 @@ const LoginJSX = (props) => {
                             <input className="login--input"
                                 type="text"
                                 required
-                                // onChange={props.handleFieldChange}
-                                id="question"
-                                placeholder="Enter a Question"
+                                 onChange={props.handleFieldChange}
+                                id="username"
+                                placeholder="Username"
                             /></div>
 
 
                         <div className="formChild">
                             <label htmlFor="question">Password </label>
                             <input className="login--input"
-                                type="text"
+                                type="password"
                                 required
-                                // onChange={props.handleFieldChange}
-                                id="question"
-                                placeholder="Enter a Question"
+                                onChange={props.handleFieldChange}
+                                id="password"
+                                placeholder="Password"
                             /></div>
 
 
@@ -44,8 +44,8 @@ const LoginJSX = (props) => {
                     <div className="formChild">
                         <button className="submitbtn"
                             type="button"
-                        // disabled={props.isLoading}
-                        // onClick={props.newQuestion}
+                        disabled={props.isLoading}
+                         onClick={props.loginCheck}
                         >Submit</button>
                     </div>
                     <div className="formChild">
