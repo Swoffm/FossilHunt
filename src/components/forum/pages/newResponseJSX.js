@@ -14,6 +14,7 @@ const NewResponseJSX = (props) => {
     <h1>New Response</h1>
 <fieldset>
     <div className="formgrid">
+    <h3 className="question">{props.question.question}</h3>
         <div className="formChild">
         <label htmlFor="response">Response: </label>
         <input 

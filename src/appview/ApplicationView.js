@@ -15,7 +15,15 @@ import ForumQuestionDetails from "../components/forum/forumQuestionDetails"
 import NewResponse from "../components/forum/newResponse"
 
 
-const ApplicationView = () => {
+// import login components below
+import Login from "../components/login/Login"
+import Registration from "../components/login/Registration"
+
+
+
+
+const ApplicationView = (props) => {
+    console.log(props.setUser)
     let hasUser = true;
 
     return (
@@ -107,10 +115,30 @@ const ApplicationView = () => {
                 }}
             />
 
-          
+
+            {/* below here are where the login routes go */}
+
+            <Route
+                exact
+                path="/login"
+                render={props => {
+                    return (<Login setUser={props.setUser} {...props} />
+                    )
+                }}
+            />
+
+            <Route
+                exact
+                path="/login/registration"
+                render={props => {
+                    return (<Registration {...props} />
+                    )
+                }}
+            />
 
 
         </React.Fragment>
+
     )
 }
 
