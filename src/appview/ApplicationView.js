@@ -23,7 +23,7 @@ import Registration from "../components/login/Registration"
 
 
 const ApplicationView = (props) => {
-    console.log(props.setUser)
+    let user = sessionStorage.getItem("userInfo")
     let hasUser = true;
 
     return (
@@ -45,7 +45,7 @@ const ApplicationView = (props) => {
                 path="/fossilcollection"
                 render={props => {
 
-                    if (hasUser) {
+                    if (user) {
                         return <FossilCollection {...props} />
                     }
                     else { return <Home {...props} /> }
@@ -122,8 +122,12 @@ const ApplicationView = (props) => {
                 exact
                 path="/login"
                 render={props => {
+                    if(user) {
+                       return (<Redirect to="/" />)
+                    } else {
                     return (<Login setUser={props.setUser} {...props} />
                     )
+                    }
                 }}
             />
 

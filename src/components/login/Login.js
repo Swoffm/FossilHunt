@@ -15,7 +15,9 @@ const Login = (props) => {
         stateToChange[evt.target.id] = evt.target.value;
         setUserInfo(stateToChange);
     }
-
+    function refreshPage() {
+        window.location.reload(false);
+      }
 
     //this checks to see if login matches login inofrmation in the database
     const loginCheck = () => {
@@ -31,8 +33,8 @@ const Login = (props) => {
             if(userCheck) {
                 let user = {username: userCheck[0].username, userId: userCheck[0].userId}
                 sessionStorage.setItem("userInfo", JSON.stringify(user));
+                refreshPage();
               
-                props.history.push("/")
             }
 }
 
