@@ -20,12 +20,14 @@ import Login from "../components/login/Login"
 import Registration from "../components/login/Registration"
 import Helper from "../HelperFunctions/Helper"
 
+//import account components
+import Account from "../components/accountInformation/Account"
+
 
 
 const ApplicationView = (props) => {
     let user = sessionStorage.getItem("userInfo")
- 
-console.log(Helper.getUserId())
+
 
     return (
         <React.Fragment>
@@ -123,11 +125,11 @@ console.log(Helper.getUserId())
                 exact
                 path="/login"
                 render={props => {
-                    if(user) {
-                       return (<Redirect to="/" />)
+                    if (user) {
+                        return (<Redirect to="/" />)
                     } else {
-                    return (<Login setUser={props.setUser} {...props} />
-                    )
+                        return (<Login setUser={props.setUser} {...props} />
+                        )
                     }
                 }}
             />
@@ -137,6 +139,17 @@ console.log(Helper.getUserId())
                 path="/login/registration"
                 render={props => {
                     return (<Registration {...props} />
+                    )
+                }}
+            />
+
+            {/* Account Components*/}
+
+            <Route
+                exact
+                path="/account"
+                render={props => {
+                    return (<Account {...props} />
                     )
                 }}
             />
