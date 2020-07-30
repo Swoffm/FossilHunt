@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import AccountEditJSX from "./pages/accountEditJSX"
 import AccountManager from "./manager/AccountManager"
 import Helper from "../../HelperFunctions/Helper"
-
+import "./styles/account.css"
 
 const AccountEdit = props => {
     const [isLoading, setIsLoading] = useState(false);
@@ -41,7 +41,12 @@ const AccountEdit = props => {
         getUser(userId)
     }, [])
 
-    return (<AccountEditJSX handleFieldChange={handleFieldChange} updateUser={updateUser} user={user} {...props} />)
+    return (
+        <section className="accountParent"> 
+    
+    <AccountEditJSX handleFieldChange={handleFieldChange} updateUser={updateUser} user={user} {...props} />
+    </section>
+    )
 }
 
 export default AccountEdit

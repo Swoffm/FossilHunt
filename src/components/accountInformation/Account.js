@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import Helper from "../../HelperFunctions/Helper"
 import AccountJSX from "./pages/AccountJSX"
 import AccountManager from "./manager/AccountManager"
+import "./styles/account.css"
 
 const Account = props => {
 

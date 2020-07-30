@@ -9,7 +9,7 @@ const AccountJSX = props => {
 
      
     return(
-        <section className="accountParent">
+        <section className="accountChild">
             <h1>Account Information</h1>
     <div>Email: {props.user.email}</div>
     <div>Username: {props.user.username}</div>
@@ -19,6 +19,8 @@ const AccountJSX = props => {
     <Link to="account/newpassword">
     <div>Change Password</div>
     </Link>
+    <button>Logout</button>
+
         </section>
     )
 

@@ -31,7 +31,7 @@ const ForumQuestionDetails = props => {
 
     return (<>
         <div className="FossilResponse_parent">
-       <Link to={`/forumResponse/${props.match.params.questionId}/new`}><button>Respond</button> </Link>
+    {userId ? <Link to={`/forumResponse/${props.match.params.questionId}/new`}><button>Respond</button> </Link> : null}
          
             <section>
 

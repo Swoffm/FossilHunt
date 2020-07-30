@@ -6,7 +6,7 @@ const AccountEditJSX = props => {
 
 
     return(
-        <section className="accountParent">
+        <section className="accountChild">
             <h1>Account Update</h1>
             <label htmlFor="genus">Email: </label>
                 <input
