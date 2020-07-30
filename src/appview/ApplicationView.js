@@ -17,8 +17,7 @@ import NewResponse from "../components/forum/newResponse"
 
 // import login components below
 import Login from "../components/login/Login"
-import { BrowserRouter as Router } from "react-router-dom";
-import ReactDOM from 'react-dom';
+import Registration from "../components/login/Registration"
 
 
 
@@ -122,14 +121,23 @@ const ApplicationView = () => {
                 exact
                 path="/login"
                 render={props => {
-                    return( <Login {...props} />
+                    return (<Login {...props} />
+                    )
+                }}
+            />
+
+            <Route
+                exact
+                path="/login/registration"
+                render={props => {
+                    return (<Registration {...props} />
                     )
                 }}
             />
 
 
         </React.Fragment>
-        
+
     )
 }
 
