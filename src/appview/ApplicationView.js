@@ -150,8 +150,13 @@ const ApplicationView = (props) => {
                 exact
                 path="/account"
                 render={props => {
-                    return (<Account {...props} />
-                    )
+                    if (user) {
+                        return (<Account {...props} />
+                            )
+                    } else {
+                        return (<Redirect to="/" />)
+                    }
+                   
                 }}
             />
 

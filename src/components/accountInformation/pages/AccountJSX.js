@@ -19,7 +19,7 @@ const AccountJSX = props => {
     <Link to="account/newpassword">
     <div>Change Password</div>
     </Link>
-    <button>Logout</button>
+    <button onClick={props.logout}>Logout</button>
 
         </section>
     )

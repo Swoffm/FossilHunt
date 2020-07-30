@@ -1,6 +1,11 @@
 
 
 const Helper = {
+
+    refreshPage() {
+        window.location.reload(false);
+    }, 
+
     getUserId() {
         let user = sessionStorage.getItem("userInfo")
         if (user) {

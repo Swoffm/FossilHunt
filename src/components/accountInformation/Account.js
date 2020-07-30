@@ -16,6 +16,11 @@ let userId = Helper.getUserId()
         })
     }
 
+    const logout =() => {
+        sessionStorage.clear()
+        Helper.refreshPage();
+    }
+
 
 
     useEffect(() => {
@@ -25,7 +30,7 @@ let userId = Helper.getUserId()
 
     return(
         <section className="accountParent"> 
-        <AccountJSX user={user} {...props}/>
+        <AccountJSX logout={logout} user={user} {...props}/>
         </section>
    )
 }

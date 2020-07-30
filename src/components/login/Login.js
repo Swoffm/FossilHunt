@@ -1,7 +1,7 @@
 import LoginJSX from "./DOM/LoginJSX"
 import React, { useState, useEffect } from "react"
 import LoginManager from "./manager/LoginManager"
-
+import Helper from "../../HelperFunctions/Helper"
 
 
 const Login = (props) => {
@@ -15,9 +15,7 @@ const Login = (props) => {
         stateToChange[evt.target.id] = evt.target.value;
         setUserInfo(stateToChange);
     }
-    function refreshPage() {
-        window.location.reload(false);
-      }
+    
 
     //this checks to see if login matches login inofrmation in the database
     const loginCheck = () => {
@@ -44,7 +42,7 @@ const Login = (props) => {
                }
                
                  sessionStorage.setItem("userInfo", JSON.stringify(user));
-                 refreshPage();
+                 Helper.refreshPage();
               
             }
 }
