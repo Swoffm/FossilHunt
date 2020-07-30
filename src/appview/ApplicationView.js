@@ -18,13 +18,14 @@ import NewResponse from "../components/forum/newResponse"
 // import login components below
 import Login from "../components/login/Login"
 import Registration from "../components/login/Registration"
-
+import Helper from "../HelperFunctions/Helper"
 
 
 
 const ApplicationView = (props) => {
     let user = sessionStorage.getItem("userInfo")
-    let hasUser = true;
+ 
+console.log(Helper.getUserId())
 
     return (
         <React.Fragment>

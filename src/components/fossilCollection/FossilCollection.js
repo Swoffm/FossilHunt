@@ -2,10 +2,12 @@ import React, {useEffect, useState} from "react"
 import FossilCollectionJSX from "./pages/FossilCollectionJSX"
 import fossilCollectionManager from "./manager/fossilCollectionManager"
 import "./styles/fossilCard.css"
+import Helper from "../../HelperFunctions/Helper"
+
 
 const FossilCollection = (props) => {
 // ====================change userId Below ============
-    const UserId = 1;
+    const UserId = Helper.getUserId();
 
     const [fossil, setFossil] = useState([])
 

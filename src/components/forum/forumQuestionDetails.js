@@ -3,14 +3,15 @@ import ForumQuestionDetailsJSX from "./pages/forumQuestionDetailsJSX"
 import ForumManager from "./manager/ForumManager"
 import ResponseJSX from "./pages/ResponseJSX"
 import { Link } from "react-router-dom";
+import Helper from "../../HelperFunctions/Helper"
 
 
 
 
 const ForumQuestionDetails = props => {
 
-    // ====================change userId=============
-    const userId = 1
+  
+    const userId = Helper.getUserId();
 
     const [response, setResponse] = useState([])
     const [question, setQuestion] = useState([])

@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react"
 import ForumJSX from "./pages/forumJSX"
 import ForumManager from "./manager/ForumManager"
+import Helper from "../../HelperFunctions/Helper"
 import "./styles/forumCard.css"
 
 const Forum = (props) => {
-    // =========change userId below ========
-    const UserId = 1;
-    const hasUser = true
+ 
+    
+    const UserId = Helper.getUserId();
+    
 
     const [question, setQuestion] = useState([])
 
@@ -25,7 +27,7 @@ const Forum = (props) => {
         <>
             <section className="forumParent">
                 <div>
-                    {hasUser ? <button className="addbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
+                    {UserId ? <button className="addbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
                 </div>
                 <div>
                     <h1>Fossil Forum</h1>
