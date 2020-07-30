@@ -31,9 +31,20 @@ const Login = (props) => {
         else {
             let userCheck = users.map(element => (element.username === userInfo.username) ? {username: element.username, userId: element.userId}: false )
             if(userCheck) {
-                let user = {username: userCheck[0].username, userId: userCheck[0].userId}
-                sessionStorage.setItem("userInfo", JSON.stringify(user));
-                refreshPage();
+
+                // the for loop here is meant to find thelocation in the array usercheck that does 
+                // no equal false
+               for(let element in userCheck){
+                 
+                   if(userCheck[element].userId) {
+                   var user = {username: userCheck[element].username, userId: userCheck[element].userId}
+                 
+
+                   }
+               }
+               
+                 sessionStorage.setItem("userInfo", JSON.stringify(user));
+                 refreshPage();
               
             }
 }

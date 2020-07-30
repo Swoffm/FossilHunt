@@ -3,11 +3,11 @@
 const Helper = {
     getUserId() {
         let user = sessionStorage.getItem("userInfo")
-        if (user !== "") {
-            // const UserId = user.slice(user.search("userId"))
-            // const myId = UserId.split(":")[1]
-            // let userId = (myId.split("}")[0])
-            return user
+        if (user) {
+            const UserId = user.slice(user.search("userId"))
+            const myId = UserId.split(":")[1]
+            let userId = (myId.split("}")[0])
+            return parseInt(userId)
         }
 
     },
