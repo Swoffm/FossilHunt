@@ -3,7 +3,7 @@ import FossilCollectionJSX from "./pages/FossilCollectionJSX"
 import fossilCollectionManager from "./manager/fossilCollectionManager"
 import "./styles/fossilCard.css"
 import Helper from "../../HelperFunctions/Helper"
-
+import Filter from "./filter/filter"
 
 const FossilCollection = (props) => {
 // ====================change userId Below ============
@@ -23,6 +23,14 @@ const FossilCollection = (props) => {
         })
     }
 
+    // only have fossils that contain a certain species or location 
+    // add filter change to props and pass it to filterJSX
+    const filterChange = () => {
+
+    }
+
+    
+
 
     
 
@@ -34,8 +42,13 @@ const FossilCollection = (props) => {
     return (
         <>
          <h1>Fossil Collection</h1>
-        <div>
+         <div className="fossil--buttons">
+        <div className="fossil--add">
             <button onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
+            </div>
+            <div className="filter--fossil">
+                <Filter UserId={UserId} {...props}/>
+            </div>
             </div>
         <section className="fossilParent">
            

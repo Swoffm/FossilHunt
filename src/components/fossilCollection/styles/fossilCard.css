@@ -18,3 +18,19 @@ width: 25%;
     width: 100%;;
 }
 
+
+/* fossil buttons styling below */
+
+.fossil--buttons {
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.filter--fossil{
+    margin-right: .5em;
+flex: 1;
+text-align: right;
+}
+
+

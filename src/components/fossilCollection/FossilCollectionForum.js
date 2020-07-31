@@ -28,7 +28,14 @@ const FossilCollectionForum = (props) => {
         } else {
           setIsLoading(true);
           // Create the owner and redirect user to owner list
-          fossilCollectionManager.post(fossil)
+          let newFossil = {
+            userId: userId,
+            genus: fossil.genus.toUpperCase(),
+            timePeriod: fossil.timePeriod,
+            location: fossil.location,
+            image: fossil.image
+          }
+          fossilCollectionManager.post(newFossil)
             .then(() => props.history.push("/fossilcollection"));
         }
       };

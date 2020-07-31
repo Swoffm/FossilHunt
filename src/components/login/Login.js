@@ -16,7 +16,6 @@ const Login = (props) => {
         setUserInfo(stateToChange);
     }
     
-
     //this checks to see if login matches login inofrmation in the database
     const loginCheck = () => {
         let username = users.some(element => element.username === userInfo.username)
