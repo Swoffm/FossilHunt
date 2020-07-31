@@ -23,7 +23,7 @@ import Helper from "../HelperFunctions/Helper"
 //import account components
 import Account from "../components/accountInformation/Account"
 import AccountEdit from "../components/accountInformation/accountEdit"
-
+import PasswordEdit from "../components/accountInformation/PasswordEdit"
 
 
 const ApplicationView = (props) => {
@@ -152,11 +152,11 @@ const ApplicationView = (props) => {
                 render={props => {
                     if (user) {
                         return (<Account {...props} />
-                            )
+                        )
                     } else {
                         return (<Redirect to="/" />)
                     }
-                   
+
                 }}
             />
 
@@ -165,6 +165,15 @@ const ApplicationView = (props) => {
                 path="/account/edit"
                 render={props => {
                     return (<AccountEdit {...props} />
+                    )
+                }}
+            />
+
+            <Route
+                exact
+                path="/account/newpassword"
+                render={props => {
+                    return (<PasswordEdit {...props} />
                     )
                 }}
             />
