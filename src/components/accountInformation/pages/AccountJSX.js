@@ -1,11 +1,9 @@
 import React from "react"
 import { Link } from "react-router-dom";
 
+//this file is holds the JSX for account information
+
 const AccountJSX = props => {
-
-    console.log(props)
-    
-
 
      
     return(

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Helper from "../../HelperFunctions/Helper"
 import AccountJSX from "./pages/AccountJSX"
-import AccountManager from "./manager/AccountManager"
+import LoginManager from "../login/manager/LoginManager"
 import "./styles/account.css"
 
 const Account = props => {
@@ -11,7 +11,7 @@ let userId = Helper.getUserId()
     const [user, setUser] = useState([])
 
     const getUser = id => {
-        AccountManager.get(id).then((results) => {
+        LoginManager.get(id).then((results) => {
             setUser(results)
         })
     }

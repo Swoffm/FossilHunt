@@ -14,7 +14,19 @@ const LoginManager = {
             },
             body: JSON.stringify(element)
         }).then(data => data.json())
-    }
+    },
+    get(id) {
+        return fetch(`${url}/users/${id}`).then(result => result.json())
+    },
+    update(element) {
+        return fetch(`${url}/users/${element.id}`, {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(element)
+        }).then(data => data.json());
+      }
 }
 
 

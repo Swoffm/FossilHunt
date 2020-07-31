@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
 import AccountEditJSX from "./pages/accountEditJSX"
-import AccountManager from "./manager/AccountManager"
+import LoginManager from "../login/manager/LoginManager"
 import Helper from "../../HelperFunctions/Helper"
 import "./styles/account.css"
 
@@ -17,7 +17,7 @@ const AccountEdit = props => {
     };
 
     const getUser = id => {
-        AccountManager.get(id).then((results) => {
+        LoginManager.get(id).then((results) => {
             setUser(results)
         })
     }
@@ -28,7 +28,7 @@ const AccountEdit = props => {
             window.alert("Please fill out the form")
         }
         else {
-            AccountManager.update(user).then((results) => {
+            LoginManager.update(user).then((results) => {
                 setIsLoading(true);
                 setUser(results)
                 props.history.push("/account")
