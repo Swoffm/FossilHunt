@@ -18,13 +18,17 @@ import NewResponse from "../components/forum/newResponse"
 // import login components below
 import Login from "../components/login/Login"
 import Registration from "../components/login/Registration"
+import Helper from "../HelperFunctions/Helper"
 
-
+//import account components
+import Account from "../components/accountInformation/Account"
+import AccountEdit from "../components/accountInformation/accountEdit"
+import PasswordEdit from "../components/accountInformation/PasswordEdit"
 
 
 const ApplicationView = (props) => {
-    console.log(props.setUser)
-    let hasUser = true;
+    let user = sessionStorage.getItem("userInfo")
+
 
     return (
         <React.Fragment>
@@ -45,7 +49,7 @@ const ApplicationView = (props) => {
                 path="/fossilcollection"
                 render={props => {
 
-                    if (hasUser) {
+                    if (user) {
                         return <FossilCollection {...props} />
                     }
                     else { return <Home {...props} /> }
@@ -122,8 +126,12 @@ const ApplicationView = (props) => {
                 exact
                 path="/login"
                 render={props => {
-                    return (<Login setUser={props.setUser} {...props} />
-                    )
+                    if (user) {
+                        return (<Redirect to="/" />)
+                    } else {
+                        return (<Login setUser={props.setUser} {...props} />
+                        )
+                    }
                 }}
             />
 
@@ -132,6 +140,40 @@ const ApplicationView = (props) => {
                 path="/login/registration"
                 render={props => {
                     return (<Registration {...props} />
+                    )
+                }}
+            />
+
+            {/* Account Components*/}
+
+            <Route
+                exact
+                path="/account"
+                render={props => {
+                    if (user) {
+                        return (<Account {...props} />
+                        )
+                    } else {
+                        return (<Redirect to="/" />)
+                    }
+
+                }}
+            />
+
+            <Route
+                exact
+                path="/account/edit"
+                render={props => {
+                    return (<AccountEdit {...props} />
+                    )
+                }}
+            />
+
+            <Route
+                exact
+                path="/account/newpassword"
+                render={props => {
+                    return (<PasswordEdit {...props} />
                     )
                 }}
             />

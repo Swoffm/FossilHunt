@@ -3,11 +3,12 @@ import { useState} from 'react';
 import fossilCollectionManager from "./manager/fossilCollectionManager"
 import FossilCollectionForumJSX from "./pages/FossilCollectionForumJSX"
 import "./styles/fossilForum.css"
+import Helper from "../../HelperFunctions/Helper"
 
 
 const FossilCollectionForum = (props) => {
-    // =======================change below===========
-    const userId = 1;
+  
+    const userId = Helper.getUserId();
 
 
     const [fossil, setFossil] = useState({userId: userId, genus: "", timePeriod: "", location: "", image: "Cloudnary url"})

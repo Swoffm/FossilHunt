@@ -23,8 +23,6 @@ const Registration = (props) => {
     }
 
     const checkUsername = () => {
-        // let gunna = users.map(element => (element.email == "gavinswofford@gmail.com"))
-       
         let check = users.some((element) => element.username === userInfo.username)
       
         return check

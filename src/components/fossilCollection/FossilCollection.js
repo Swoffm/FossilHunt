@@ -2,10 +2,12 @@ import React, {useEffect, useState} from "react"
 import FossilCollectionJSX from "./pages/FossilCollectionJSX"
 import fossilCollectionManager from "./manager/fossilCollectionManager"
 import "./styles/fossilCard.css"
+import Helper from "../../HelperFunctions/Helper"
+
 
 const FossilCollection = (props) => {
 // ====================change userId Below ============
-    const UserId = 1;
+    const UserId = Helper.getUserId();
 
     const [fossil, setFossil] = useState([])
 
@@ -31,10 +33,12 @@ const FossilCollection = (props) => {
 
     return (
         <>
+         <h1>Fossil Collection</h1>
         <div>
             <button onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
             </div>
         <section className="fossilParent">
+           
         {fossil.map(element => element.userId == UserId ? <FossilCollectionJSX key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
         </section>
         </>

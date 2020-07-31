@@ -5,7 +5,8 @@ import "./styles/nav.css"
 
 
 const Nav = (props) => {
-    let haasUser = true;
+    // let haasUser = true;
+    let user = sessionStorage.getItem("userInfo")
     return (
         <header>
             <div className="logoParent">
@@ -27,13 +28,13 @@ const Nav = (props) => {
                         </Link>
                             </li>
                             {
-                                haasUser ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
+                                user ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
                             }
-                            <li>
-                                <Link className="nav-link" to="/login">
-                                    Log In
-                        </Link>
-                            </li>
+
+                            {
+                                !user ? <li><Link className="nav-link" to="/login"> Log In </Link></li> :  <li><Link className="nav-link" to="/account"> Account Info </Link></li>
+                            }
+                            
 
                         </ul>
                     </nav>

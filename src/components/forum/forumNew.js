@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from "react"
 import ForumManager from "./manager/ForumManager"
 import ForumNewJSX from "./pages/forumNewJSX"
+import Helper from "../../HelperFunctions/Helper"
+
 import "./styles/forumQ.css"
 
 const ForumNew = (props) => {
 
-// ===============================change the userid below ====================
-    const userId = 1;
+
+    const userId = Helper.getUserId();
 
 
 

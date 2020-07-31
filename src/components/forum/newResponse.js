@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react"
 import NewResponseJSX from "./pages/newResponseJSX"
 import ForumManager from "./manager/ForumManager"
+import Helper from "../../HelperFunctions/Helper"
+
+
 const NewResponse = props => {
 
-      // =======================change below===========
-      const userId = 1;
+      
+      const userId = Helper.getUserId();
 
       const [question, setQuestion] = useState([])
 

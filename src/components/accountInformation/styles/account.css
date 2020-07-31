@@ -1,0 +1,12 @@
+.accountParent {
+    border: .3em solid black;
+    text-align: center;
+    padding: 1em 0;
+    display: flex;
+    justify-content: center;
+}
+
+.accountChild {
+    border: .3em solid black;
+
+}

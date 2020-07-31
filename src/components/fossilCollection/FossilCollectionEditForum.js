@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react"
 import FossilCollectionEditForumJSX from "./pages/FossilCollectionEditForumJSX"
 import fossilCollectionManager from "./manager/fossilCollectionManager"
+import Helper from "../../HelperFunctions/Helper"
 
 
 const FossilEditForum = props => {
-    // ==============CHANGE VALUE BELOW========================
+   
 
-    const userId = 1;
+    const userId = Helper.getUserId();
     const fossilId = props.match.params.fossilId;
 
     const [fossil, setFossil] = useState({

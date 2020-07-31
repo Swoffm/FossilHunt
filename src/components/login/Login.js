@@ -1,7 +1,7 @@
 import LoginJSX from "./DOM/LoginJSX"
 import React, { useState, useEffect } from "react"
 import LoginManager from "./manager/LoginManager"
-
+import Helper from "../../HelperFunctions/Helper"
 
 
 const Login = (props) => {
@@ -15,7 +15,7 @@ const Login = (props) => {
         stateToChange[evt.target.id] = evt.target.value;
         setUserInfo(stateToChange);
     }
-
+    
 
     //this checks to see if login matches login inofrmation in the database
     const loginCheck = () => {
@@ -29,10 +29,21 @@ const Login = (props) => {
         else {
             let userCheck = users.map(element => (element.username === userInfo.username) ? {username: element.username, userId: element.userId}: false )
             if(userCheck) {
-                let user = {username: userCheck[0].username, userId: userCheck[0].userId}
-                sessionStorage.setItem("userInfo", JSON.stringify(user));
+
+                // the for loop here is meant to find thelocation in the array usercheck that does 
+                // no equal false
+               for(let element in userCheck){
+                 
+                   if(userCheck[element].userId) {
+                   var user = {username: userCheck[element].username, userId: userCheck[element].userId}
+                 
+
+                   }
+               }
+               
+                 sessionStorage.setItem("userInfo", JSON.stringify(user));
+                 Helper.refreshPage();
               
-                props.history.push("/")
             }
 }
 
