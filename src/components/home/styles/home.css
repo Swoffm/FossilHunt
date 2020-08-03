@@ -17,4 +17,36 @@
       height: 100%;
       width: 100%;
   }
+
+  .home--parent{
+      background-color: black;
+      color: white;
+  }
+.home--card-parent{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+
+.home--card-img {
+    display: flex;
+    width: auto;
+    /* flex: 1; */
+    justify-content: space-around;
+    /* width: 45%; */
+    
+}
+
+  .home--card-img > img {
+    width: 45%;
+    flex: 1;
+    height: 100%;
+    margin: .2em .2em;
+  }
+
+ 
+
+
+
  

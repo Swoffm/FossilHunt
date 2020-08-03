@@ -11,7 +11,7 @@ const FossilCollectionForum = (props) => {
     const userId = Helper.getUserId();
 
 
-    const [fossil, setFossil] = useState({userId: userId, genus: "", timePeriod: "", location: "", image: "Cloudnary url"})
+     const [fossil, setFossil] = useState({userId: userId, genus: "", timePeriod: "", location: "", image: "Cloudnary url", rockType: ""})
     const [isLoading, setIsLoading] = useState(false);
 
     //write a function to handle input changes
@@ -28,7 +28,15 @@ const FossilCollectionForum = (props) => {
         } else {
           setIsLoading(true);
           // Create the owner and redirect user to owner list
-          fossilCollectionManager.post(fossil)
+          let newFossil = {
+            userId: userId,
+            genus: fossil.genus.toUpperCase(),
+            timePeriod: fossil.timePeriod,
+            location: fossil.location,
+            image: fossil.image,
+            rockType: fossil.rockType
+          }
+          fossilCollectionManager.post(newFossil)
             .then(() => props.history.push("/fossilcollection"));
         }
       };

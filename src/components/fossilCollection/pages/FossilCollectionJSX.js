@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const FossilCollectionJSX = (props) => {
 
-
+console.log(props)
     return (
+      
         <section className="fossilCard">
-
             <h3>{props.fossil.genus}</h3>
             <div className="fossilImage">
                 {props.fossil.image}

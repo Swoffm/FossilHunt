@@ -28,12 +28,9 @@ const PasswordEdit = props => {
     const newPassword = (element) => {
         element.preventDefault();
         setIsLoading(true)
-        console.log(user)
-        console.log(password)
-
+      
         if(password.curentPasword != user.password) {
-            window.alert("Wrong Current Password")
-            
+            window.alert("Wrong Current Password")  
         }
         else if(password.password != password.conPassword) {
             window.alert("New Password does not match")
