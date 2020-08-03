@@ -4,7 +4,7 @@ import React from "react"
 const FilterJSX = props => {
 
 console.log(props)
-    const location = props.fossilLocation.map(element => element.userId == props.UserId ? element.location : null)
+    const location = props.FLocation.map(element => element.userId == props.UserId ? element.location : null)
     console.log(location)
     let locationArray = []
     for(let i in location) {
@@ -20,7 +20,7 @@ console.log(props)
       const optionLocation = locationArray.filter(unique)
 
         //=================below looks for a unique genus ============
-      const genus = props.fossilLocation.map(element => element.userId == props.UserId ? element.genus : null)
+      const genus = props.FLocation.map(element => element.userId == props.UserId ? element.genus : null)
       console.log(location)
       let genusArray = []
       for(let i in genus) {
@@ -41,12 +41,12 @@ let id = 1;
     
     <section className="fossil--select">
 
-        <select className="fossil--select-location" name="location">
+        <select className="fossil--select-location" name="location" onChange={props.filterLocationChange}>
         <option>Location</option>
            {optionLocation.map(element => <option value={element} key={id++}>{element}</option>)}
         </select>
 
-        <select className="fossil--select-genus" name="genus">
+        <select className="fossil--select-genus" name="genus" onChange={props.filterGenusChange}>
         <option>genus/species</option>
            {optionGenus.map(element => <option value={element} key={id++}>{element}</option>)}
         </select>

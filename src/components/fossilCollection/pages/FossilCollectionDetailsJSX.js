@@ -15,7 +15,7 @@ const FossilCollectionDetailsJSX = (props) => {
                     <p className="fossilDetails">{props.fossil.image}</p>
                 </section>
                 <section>
-                    <p className="fossilDetails">Geological Time Period: {props.fossil.timeperiod}</p>
+                    <p className="fossilDetails">Geological Time Period: {props.fossil.timePeriod}</p>
                 </section>
                 <section>
                     <p className="fossilDetails">Rock Type: {props.fossil.rockType}</p>

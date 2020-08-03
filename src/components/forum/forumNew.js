@@ -23,7 +23,7 @@ const ForumNew = (props) => {
 
       const newQuestion = evt => {
           evt.preventDefault();
-          if(question.question === "") {
+          if(question.question === "" || question.location=="" || question.location == null) {
               window.alert("Please input a question")
           } 
           else {

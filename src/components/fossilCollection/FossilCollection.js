@@ -10,6 +10,8 @@ const FossilCollection = (props) => {
     const UserId = Helper.getUserId();
 
     const [fossil, setFossil] = useState([])
+    const [fossilLocation, setFossilLocation] = useState([])
+    const [genus, setGenus] = useState([])
 
     //get all the fossils for user
     const getFossil = () => {
@@ -25,8 +27,11 @@ const FossilCollection = (props) => {
 
     // only have fossils that contain a certain species or location 
     // add filter change to props and pass it to filterJSX
-    const filterChange = () => {
-
+    const filterLocationChange = (evt) => {
+            setFossilLocation(evt.target.value)
+    }
+    const filterGenusChange = (evt) => {
+        setGenus(evt.target.value)
     }
 
     
@@ -47,13 +52,31 @@ const FossilCollection = (props) => {
             <button onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
             </div>
             <div className="filter--fossil">
-                <Filter UserId={UserId} {...props}/>
+                <Filter filterGenusChange={filterGenusChange} filterLocationChange={filterLocationChange} UserId={UserId} {...props}/>
             </div>
             </div>
         <section className="fossilParent">
-           
-        {fossil.map(element => element.userId == UserId ? <FossilCollectionJSX key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
-        </section>
+           {/* below is the logic for filter data!! */}
+        {fossil.map(element => element.userId == UserId  && fossilLocation == "Location" && genus == "" || element.userId == UserId  && fossilLocation == "" && genus == "genus/species" || 
+        element.userId == UserId  && fossilLocation == "" && genus == "" || 
+        element.userId == UserId && fossilLocation == "Location" && genus == "genus/species"? 
+        <FossilCollectionJSX location={fossilLocation} genus={genus} key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
+
+
+        {fossil.map(element => element.userId == UserId  && fossilLocation == element.location && genus == "" ||
+        element.userId == UserId  && fossilLocation == element.location && genus == "genus/species" || 
+        element.userId == UserId  && fossilLocation == "" && genus == element.genus || 
+        element.userId == UserId  && fossilLocation == "Location" && genus == element.genus
+             ? <FossilCollectionJSX location={fossilLocation} genus={genus} key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
+
+
+
+
+
+{fossil.map(element => element.userId == UserId  && fossilLocation == element.location && genus == element.genus
+             ? <FossilCollectionJSX location={fossilLocation} genus={genus} key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
+      
+      </section>
         </>
     )
 }
