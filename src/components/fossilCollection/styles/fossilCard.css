@@ -1,11 +1,56 @@
+
+
+:root {
+    /* --logo-background-color: #731504; 
+    example 
+    color: var(--logo--white);
+    */
+    /* --fossil-background: #1a1a1a;
+    --fossil-card-background: #262626;
+    --fossil-card-shadow: #333333; */
+
+    --fossil-background: #0d0d0d;
+    --fossil-card-background: #0d0d0d;
+    --fossil-card-shadow: #000000;
+    --fossil-card-btn: #D1CFCC;
+    --fossil-card-font-color:black;
+
+    
+}
+
+
+.fossil--grandparent {
+    background-color: var(--fossil-background);
+    color: white;
+    height: 100%;
+    
+}
+
+.fossil--grandparent > div > h1 {
+    margin: 0;
+    padding-top: .5em;
+    text-align: center;
+    font-size: 2em;
+
+}
+
+
+
+
 .fossilParent {
-border: 3px solid royalblue;
+/* border: 3px solid royalblue; */
 display: flex; 
 flex-wrap: wrap;
 justify-content: space-evenly;
+
 }
+
+
+
 .fossilCard {
-border: 3px solid pink;
+border: 3px solid var(--fossil-card-background);
+background-color: var(--fossil-card-background);
+box-shadow: .4em .4em var(--fossil-card-shadow);
 padding: .5em .9em;
 margin: 1em 0;
 width: 25%;
@@ -14,32 +59,48 @@ flex-wrap: wrap;
 text-align: center;
 justify-content: center;
 }
+
+.fossilCard:hover {
+box-shadow: .6em .6em .6em .6em var(--fossil-card-shadow);
+
+}
+
+
+
+
+
+
 .locationInfo {
     flex: 1;
 }
 
+/* all button classes are below */
+
 .deleteButton, .detailsEdit, .detailsButton{
-    background-color: rgb(113, 147, 248);
-    color: pink;
-    width: 100%;
+    background-color: var(--fossil-card-btn);
+    color: var(--fossil-card-font-color);
+    width: 25%;
 }
 
 
 /* fossil buttons styling below */
 
-.fossil--buttons {
-    display: flex;
-    flex-wrap: wrap;
-   
-}
+
 .locationInfo {
 width: 100%;
 flex: 1;
 margin: .2em 25%;
 }
 
+
+/* button styling for fossil collection below */
+
 .btn {
     width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: fit-content;
+    
 }
 
 .detailsEdit {
@@ -55,6 +116,7 @@ width: 100%;
 }
 
 
+/* styling for the img tag child of fossilImage div below */
 .fossil--image {
     
 width: 100%;

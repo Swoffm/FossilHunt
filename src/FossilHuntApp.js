@@ -2,7 +2,7 @@ import React, {useState}from 'react';
 import ApplicationView from "./appview/ApplicationView"
 import Nav from "./appview/Nav"
 import Helper from "./HelperFunctions/Helper"
-
+import "../src/appview/styles/app.css"
 function FossilHuntApp() {
 
   const isAuthenticated = () => sessionStorage.getItem("userInfo") !== null;
@@ -18,8 +18,11 @@ function FossilHuntApp() {
   
   return (
      <>
+     
     <Nav hasUser={hasUser} />
+    <section className="appView">
     <ApplicationView  hasUser={hasUser} setUser={setUser} />
+    </section>
     </>
   );
 }

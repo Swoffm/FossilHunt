@@ -11,7 +11,7 @@ const Home = (props) => {
             <section className="home--parent">
                 <section className="home--child">
                     <div className="banner">
-                        <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596048818/Ivory_and_Ash_Grey_Photo_DIY_Influencer_Minimalist_Facebook_Cover_twfddg.png" alt="picture of a young man holding a fossil" />
+                        <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596567405/Ivory_and_Ash_Grey_Photo_DIY_Influencer_Minimalist_Facebook_Cover_zzshtx.png" alt="picture of a young man holding a fossil" />
                     </div>
                     <section className="home--card-parent">
                         <div className="home--card-img">

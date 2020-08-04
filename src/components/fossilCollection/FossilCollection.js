@@ -45,8 +45,9 @@ const FossilCollection = (props) => {
 
 
     return (
-        <>
-         <h1>Fossil Collection</h1>
+     
+        <section className="fossil--grandparent">
+        <div><h1>Fossil Collection</h1></div> 
          <div className="fossil--buttons">
         <div className="fossil--add">
             <button onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
@@ -77,7 +78,8 @@ const FossilCollection = (props) => {
              ? <FossilCollectionJSX location={fossilLocation} genus={genus} key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
       
       </section>
-        </>
+      </section>
+     
     )
 }
 

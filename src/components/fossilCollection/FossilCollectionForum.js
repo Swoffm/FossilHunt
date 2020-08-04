@@ -38,7 +38,7 @@ const FossilCollectionForum = (props) => {
  
       const newFossil = evt => {
         evt.preventDefault();
-        if (fossil.location === "" || !image) {
+        if (fossil.location === "" || !image || image == "") {
           window.alert("Please input a location");
         } else {
           setIsLoading(true);

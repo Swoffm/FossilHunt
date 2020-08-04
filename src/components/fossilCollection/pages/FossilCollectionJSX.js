@@ -17,21 +17,22 @@ const FossilCollectionJSX = (props) => {
             </div>
     <div className="locationInfo">Location: {props.fossil.location}</div>
 
-    <div className="btn">
+    <section className="btn">
     <Link to={`/fossilDetails/${props.fossil.id}`}>
   <button className="detailsButton">Details</button>
 </Link>
-</div>
 
 
-<div className="btn">
+
+
 <Link to={`/fossilEdit/${props.fossil.id}`}>
   <button className="detailsEdit">Edit</button>
 </Link>
-</div >
+
 
 
         <button className="deleteButton" onClick={()=> {props.deleteFossil(props.fossil.id)}}>Delete</button>
+        </section>
         </section>
     )
 }
