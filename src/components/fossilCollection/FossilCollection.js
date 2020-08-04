@@ -45,7 +45,8 @@ const FossilCollection = (props) => {
 
 
     return (
-        <>
+     
+        <section className="fossil--grandparent">
          <h1>Fossil Collection</h1>
          <div className="fossil--buttons">
         <div className="fossil--add">
@@ -77,7 +78,8 @@ const FossilCollection = (props) => {
              ? <FossilCollectionJSX location={fossilLocation} genus={genus} key={element.id} deleteFossil={deleteFossil} fossil={element} {...props}/> : null )}
       
       </section>
-        </>
+      </section>
+     
     )
 }
 

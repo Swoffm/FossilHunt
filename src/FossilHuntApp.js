@@ -19,7 +19,9 @@ function FossilHuntApp() {
   return (
      <>
     <Nav hasUser={hasUser} />
+    <section className="appView">
     <ApplicationView  hasUser={hasUser} setUser={setUser} />
+    </section>
     </>
   );
 }

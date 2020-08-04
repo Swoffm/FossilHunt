@@ -67,7 +67,8 @@ const Registration = (props) => {
             const user = {
                 email: userInfo.email,
                 username: userInfo.username,
-                password: userInfo.password
+                password: userInfo.password,
+                userImage: "https://res.cloudinary.com/drcnakesm/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,b_rgb:262c35/v1595953152/logo_o7omlv.jpg"
             }
 
             LoginManager.post(user).then(() => props.history.push("/login"))

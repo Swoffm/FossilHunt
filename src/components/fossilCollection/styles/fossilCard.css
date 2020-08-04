@@ -1,5 +1,13 @@
+.fossil--grandparent {
+    background-color: #60625A;
+    color: white;
+}
+
+
+
+
 .fossilParent {
-border: 3px solid royalblue;
+/* border: 3px solid royalblue; */
 display: flex; 
 flex-wrap: wrap;
 justify-content: space-evenly;
@@ -14,6 +22,22 @@ flex-wrap: wrap;
 text-align: center;
 justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .locationInfo {
     flex: 1;
 }
