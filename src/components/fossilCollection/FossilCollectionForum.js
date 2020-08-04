@@ -13,6 +13,7 @@ const FossilCollectionForum = (props) => {
 
      const [fossil, setFossil] = useState({userId: userId, genus: "", timePeriod: "", location: "", image: "Cloudnary url", rockType: ""})
     const [isLoading, setIsLoading] = useState(false);
+    const [image, setImage] = useState("")
 
     //write a function to handle input changes
     const handleFieldChange = evt => {
@@ -20,10 +21,24 @@ const FossilCollectionForum = (props) => {
         stateToChange[evt.target.id] = evt.target.value;
         setFossil(stateToChange);
       };
+      const uploadImage = async evt => {
+        const files = evt.target.files
+        const data = new FormData()
+        data.append('file', files[0])
+        data.append('upload_preset', 'thefossilhunt')
+        const api = await fetch("	https://api.cloudinary.com/v1_1/fossilhunt/image/upload",
+        {
+          method: 'POST',
+          body: data
+        })
+        const file = await api.json()
+        setImage(file.secure_url)
 
+      }
+ 
       const newFossil = evt => {
         evt.preventDefault();
-        if (fossil.location === "") {
+        if (fossil.location === "" || !image) {
           window.alert("Please input a location");
         } else {
           setIsLoading(true);
@@ -33,7 +48,7 @@ const FossilCollectionForum = (props) => {
             genus: fossil.genus.toUpperCase(),
             timePeriod: fossil.timePeriod,
             location: fossil.location,
-            image: fossil.image,
+            image: image,
             rockType: fossil.rockType
           }
           fossilCollectionManager.post(newFossil)
@@ -44,7 +59,7 @@ const FossilCollectionForum = (props) => {
 
     return (
         <>
-        <FossilCollectionForumJSX handleFieldChange={handleFieldChange} newFossil={newFossil} {...props}/>
+        <FossilCollectionForumJSX uploadImage={uploadImage} handleFieldChange={handleFieldChange} newFossil={newFossil} {...props}/>
         </>
     )
 }
