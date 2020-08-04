@@ -3,9 +3,9 @@ import React from "react"
 
 const FilterJSX = props => {
 
-console.log(props)
+
     const location = props.FLocation.map(element => element.userId == props.UserId ? element.location : null)
-    console.log(location)
+   
     let locationArray = []
     for(let i in location) {
         if(location[i]) {
@@ -21,7 +21,7 @@ console.log(props)
 
         //=================below looks for a unique genus ============
       const genus = props.FLocation.map(element => element.userId == props.UserId ? element.genus : null)
-      console.log(location)
+      
       let genusArray = []
       for(let i in genus) {
           if(genus[i]) {

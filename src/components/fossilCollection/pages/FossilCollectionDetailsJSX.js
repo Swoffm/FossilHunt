@@ -12,7 +12,12 @@ const FossilCollectionDetailsJSX = (props) => {
             <div className="detailsParent">
                 <h1>{props.fossil.genus}</h1>
                 <section>
-                    <p className="fossilDetails">{props.fossil.image}</p>
+                <div className="fossilImage">
+            {props.fossil.image == null || props.fossil.image == "" ? 
+            null : <img className="fossil--image" src={props.fossil.image} alt="Fossil Hunt Logo" />}
+              
+             
+            </div>
                 </section>
                 <section>
                     <p className="fossilDetails">Geological Time Period: {props.fossil.timePeriod}</p>

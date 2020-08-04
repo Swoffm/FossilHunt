@@ -50,7 +50,6 @@ const FossilCollectionForumJSX = (props) => {
 
                     <label htmlFor="rockType">Rock Type: </label>
                     <input
-                        type="text"
                         required
                         onChange={props.handleFieldChange}
                         id="rockType"
@@ -124,7 +123,7 @@ const FossilCollectionForumJSX = (props) => {
                     <input
                         type="file"
                         required
-                        onChange={props.handleFieldChange}
+                        onChange={props.uploadImage}
                         id="image"
 
                     />

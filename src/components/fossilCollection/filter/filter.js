@@ -5,7 +5,7 @@ import fossilCollectionManager from "../manager/fossilCollectionManager"
 
 
 const Filter = props => {
-    console.log(props)
+  
 
     //get fossil location data
     //get fossil species data

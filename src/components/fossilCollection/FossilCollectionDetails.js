@@ -12,7 +12,7 @@ const FossilCollectionDetails = (props) => {
     
     const getFossilById = (fossilId) => {
         fossilCollectionManager.get(fossilId).then((results) => {
-            console.log(results)
+           
            setFossil(results)
         })
     }
