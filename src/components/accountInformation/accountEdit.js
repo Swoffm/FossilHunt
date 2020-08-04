@@ -6,7 +6,7 @@ import "./styles/account.css"
 
 const AccountEdit = props => {
     const [isLoading, setIsLoading] = useState(false);
-    const [user, setUser] = useState({ email: "", username: "", userImage: "cloudnary" })
+    const [user, setUser] = useState({ email: "", username: "", userImage: "" })
     let userId = Helper.getUserId()
 
 
@@ -28,10 +28,11 @@ const AccountEdit = props => {
             window.alert("Please fill out the form")
         }
         else {
+            console.log(user)
             LoginManager.update(user).then((results) => {
                 setIsLoading(true);
                 setUser(results)
-                props.history.push("/account")
+                 props.history.push("/account")
             })
         }
     }

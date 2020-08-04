@@ -8,5 +8,69 @@
 
 .accountChild {
     border: .3em solid black;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+.accountChild > div {
+    width: 100%;
+    
+}
+.accountChild > div > button {
+    /* width: 100%; */
+    padding: .2em 10em;
+    background-color: pink;
+}
 
+.userImage-selection {
+    margin: .5em 0;
+    border: 3px solid royalblue;
+display: flex; 
+flex-wrap: wrap;
+justify-content: space-evenly;
+    
+}
+.profileImage > img {
+width: 25%;
+}
+
+.userImageSection {
+    border: 3px solid pink;
+    width: 100%;
+padding: .5em .9em;
+margin: 1em 0;
+/* width: 25%; */
+display: flex;
+flex-wrap: wrap;
+
+}
+
+.cloud--imageSection > div {
+    display: inline-block;
+    display: flex;
+    border: 3px solid pink;
+    align-content: center;
+   
+    
+}
+.cloud--imageSection > div > input {
+    margin: 0;
+}
+
+.image{
+    border: 3px solid pink;
+    
+}
+
+.cloud--image {
+    border-radius: 50%;
+    width: 25%;
+    
+}
+
+.cloud--image:hover {
+    border: 2px solid black;
+}
+.cloud--image:active {
+    border: 2px solid black;
 }

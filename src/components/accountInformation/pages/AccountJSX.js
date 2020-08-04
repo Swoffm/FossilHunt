@@ -8,16 +8,17 @@ const AccountJSX = props => {
      
     return(
         <section className="accountChild">
-            <h1>Account Information</h1>
+           <div><h1>Account Information</h1></div> 
     <div>Email: {props.user.email}</div>
     <div>Username: {props.user.username}</div>
-    <div>Profile Image: </div>
-    <button onClick={() => {props.history.push("account/edit")}}>Edit</button>
+    {props.user.userImage || props.user.userImage != "" ? <div className="profileImage"> <img src={props.user.userImage} alt="user's profile image" /> </div> : <div>Select Profile Image </div> }
+    
+    <div> <button onClick={() => {props.history.push("account/edit")}}>Edit</button></div>
 
     <Link to="account/newpassword">
     <div>Change Password</div>
     </Link>
-    <button onClick={props.logout}>Logout</button>
+    <div><button onClick={props.logout}>Logout</button></div>
 
         </section>
     )
