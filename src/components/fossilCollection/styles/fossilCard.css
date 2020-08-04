@@ -11,6 +11,8 @@ margin: 1em 0;
 width: 25%;
 display: flex;
 flex-wrap: wrap;
+text-align: center;
+justify-content: center;
 }
 .locationInfo {
     flex: 1;
@@ -30,6 +32,11 @@ flex-wrap: wrap;
     flex-wrap: wrap;
    
 }
+.locationInfo {
+width: 100%;
+flex: 1;
+margin: .2em 25%;
+}
 
 .btn {
     width: 100%;
@@ -40,13 +47,16 @@ flex-wrap: wrap;
 }
 
 .filter--fossil{
+    
     margin-right: .5em;
 flex: 1;
 text-align: right;
+width: 100%;
 }
 
 
 .fossil--image {
+    
 width: 100%;
 }
 
