@@ -30,7 +30,7 @@ const FossilNav = (props) => {
 
                         </Link>
                      
-                <Link className="active" to="/">
+                <Link to="/">
                             Home
                          </Link>
 

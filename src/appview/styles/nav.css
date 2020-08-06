@@ -141,51 +141,7 @@ small {
 
 
 @media only screen and (max-width: 600px) {
-  .container > li :link {
-    /* display: none; */
-    text-decoration: none;
-  }
-  .container--wrapper > li > .container > li {
-    display: none;
-  }
-
-  .container--wrapper li:hover > .container > li {
-    /* display: none; */
-    border: .2em solid white;
-
-  }
-  .container {
-    border: .2em solid white;
-   
-  }
-  .container > li {
-    border: .2em solid white;
-   
-  }
-
-  .container--wrapper {
-    display: flex;
-  }
-
-  .container--wrapper li:hover > ul > li {
-    display: block;
-    border: .2em solid white;
-
-  }
-  .container--wrapper > .firstItem {
-    width: 100%;
-  }
-
-  
-  .logoParent {
-    display: flex;
-    height: 100%;
-    align-content: center;
-    /* flex-wrap: wrap; */
-    border: .2em solid white;
-    
-   
-  }
+ 
   
   #logo:hover {
     border: .2em solid white;
@@ -202,12 +158,6 @@ small {
 height: 2.5em;
 
   }
-.myTopnav > Link {
-  
-} 
-
-
-
   
 }
 
@@ -224,6 +174,8 @@ body {margin:0;font-family:Arial}
   background-color: black;
 }
 
+/* ===============try to float the fossil head right================== */
+
 .topnav a {
   float: left;
   display: block;
@@ -235,7 +187,7 @@ body {margin:0;font-family:Arial}
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #4ca0af;
   color: white;
 }
 

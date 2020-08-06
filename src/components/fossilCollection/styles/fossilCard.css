@@ -123,5 +123,48 @@ width: 100%;
 }
 
 @media only screen and (max-width: 600px) {
-  
+
+    .deleteButton, .detailsEdit, .detailsButton{
+        background-color: var(--fossil-card-btn);
+        color: var(--fossil-card-font-color);
+        width: 100%;
+    }
+    .fossil--select-location,
+    .fossil--select-genus,
+    .addButton {
+        background-color: var(--fossil-card-btn);
+        color: var(--fossil-card-font-color);
+        width: 50%;
+    }
+    .fossil--add {
+        text-align: center;
+    }
+
+    .fossilParent {
+        /* border: 3px solid royalblue; */
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        }
+        
+        
+        
+        .fossilCard {
+        border: 3px solid var(--fossil-card-background);
+        background-color: var(--fossil-card-background);
+        box-shadow: .4em .4em var(--fossil-card-shadow);
+        padding: .5em .9em;
+        margin: 1em 0;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        }
+        
+        .fossilCard:hover {
+        box-shadow: .6em .6em .6em .6em var(--fossil-card-shadow);
+        
+        }
 }
