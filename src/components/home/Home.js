@@ -16,13 +16,20 @@ const Home = (props) => {
                     <section className="home--card-parent">
                         {/* <div className="home--card-img"> */}
             <div className="home--card-child">
-                       
-                            <img id="homeImageOne" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207675/Beige_and_Gray_Minimalist_Quote_Instagram_Post_rcmugj.jpg" alt="picture that displays info about Fossil Hunt" />
+                <div id="mobileImg">
+                       <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596723665/Retro_Colors_Costing_Business_-_Infographics_lmzkcs.jpg" />
+                       </div>
+                       <div id="homeImageOne">
+                           <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207675/Beige_and_Gray_Minimalist_Quote_Instagram_Post_rcmugj.jpg" />
+                       </div>
+                       <div id="homeImageTwo">
+                           <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207961/Beige_and_Gray_Minimalist_Quote_Instagram_Post_1_nv2yc8.jpg" />
+                       </div>
+                           
+                         
                             </div>
                        
-            <div className="home--card-child">
-                            <img id="homeImageTwo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207961/Beige_and_Gray_Minimalist_Quote_Instagram_Post_1_nv2yc8.jpg" alt="picture that displays info about Fossil Hunt" />
-                            </div>
+            
                         {/* </div> */}
                     </section>
                     <h1>Welcome to Fossil Hunt</h1>

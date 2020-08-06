@@ -38,6 +38,22 @@
     
 }
 
+#homeImageOne {
+   flex: 1;
+   margin: .2em .5em;
+}
+#homeImageOne > img {
+     width: 100%;
+}
+#homeImageTwo > img {
+    width: 100%;
+}
+
+#homeImageTwo {
+    flex: 1;
+   margin: .2em .5em;
+
+ }
 .home--card-child > img {
     width: 45%;
     flex: 1;
@@ -45,42 +61,36 @@
     margin: .2em .2em;
   }
 
+  
+
+
+
+  @media only screen and (min-width: 750px) {
+   
+    #mobileImg {
+        display: none;
+    }
+   
+   
+   
+     }
+
+
+
  
 
- /* @media only screen and (max-width: 600px) {
- .home--card-parent {
-     display: flex;
-     flex-direction: wrap;
-     justify-content: space-between;
-     border: 5px solid white;
-     width: auto;
- }
+ 
 
- .home--card-child {
-     margin: .5em 0;
-     border: 5px solid white;
+     @media only screen and (max-width: 750px) and (min-width: 300px) {
 
-     width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: center;
- }
-
-  #homeImageOne {
-width: 100%
-  
-    
-}
-#homeImageTwo {
-    width: 100%
-
-
-
+#homeImageOne, #homeImageTwo {
+    display: none;
 }
 
 
 
-  } */
+
+
+  }
 
  
