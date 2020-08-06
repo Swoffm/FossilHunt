@@ -9,11 +9,11 @@
     --forum-card-background: #262626;
     --forum-card-shadow: #333333; */
 
-    --forum-background: #353131;
-    --forum-card-background: #2b2121;
-    --forum-card-shadow: #000000;
+    --forum-background: #f0efef;
+    --forum-card-background: #ffffff;
+    --forum-card-shadow: #f0ebeb;
     --forum-card-btn: rgb(255, 255, 255);
-    --forum-card-font-color:black;
+    --forum-card-font-color:rgb(3, 3, 3);
     --forum--logo-head-color: #44fb8d;
 
     
@@ -34,17 +34,22 @@ Link {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 3px solid #4b4646;
+    border-top: 3px solid #4b4646;
     width: 100%;
-}
-div {
-    color: white;
-}
 
+    margin: 1em 0;
+}
+.forumQ {
+    color: var(--forum-card-font-color);
+}
+.questionChild:hover {
+box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
+
+}
 .questionChild {
     color: white;
     background-color: var(--forum-card-background);
-box-shadow: .4em .4em var(--forum-card-shadow);
+box-shadow: .2em .2em .3em var(--forum-card-shadow);
  font-size: 1.5em;
    width: 75%;
     padding-left: .2em;

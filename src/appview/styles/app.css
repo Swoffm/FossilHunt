@@ -6,12 +6,12 @@
 }
 
 :root {
-   --body--color: #272727;
+   --body--color: white;
 
     
 }
 
 body {
 background-color: var(--body--color);
-color: white;
+/* color: white; */
 }

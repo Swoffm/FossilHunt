@@ -1,14 +1,47 @@
-.forumLogin > fieldset {
-    width: 25%;
-    border: .1em solid black;
-    padding-left: 0%;
-   text-align: center;
+:root {
+    --form-background-color: rgb(235, 231, 231);
+    --form-login-color: black;
+    --form-shadow: black;
+    --form-border: black;
 }
 
+
+
+.forumLogin > fieldset {
+    height: 75%;
+    background-color: var(--form-background-color);
+color: var(--form-login-color);
+    width: 25%;
+    /* border: .1em solid var(--form-border); */
+    border: 0;
+    padding-left: 0%;
+   text-align: center;
+background: linear-gradient(rgba(209, 202, 202, 0.63), var(--form-background-color), var(--form-background-color), var(--form-background-color));
+box-shadow: .2em .2em rgba(253, 249, 249, 0.863);
+}
+
+.forumLogin > fieldset:hover {
+    /* box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61); */
+    box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
+}
+
+/* submit button below  */
+
+.submitbtn {
+font-size: 1em;
+padding: .5em;
+width: 5em;
+color: var(--form-background-color);
+background-color: var(--form-login-color);
+}
+
+/* below is the form  */
 .forumLogin {
+    align-items: center;
+height: 50vh;
     display: flex;
    text-align: center;
-   margin-top: .5em;
+   
    justify-content: center;
 }
 
