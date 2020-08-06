@@ -6,7 +6,7 @@ const ForumQuestionDetailsJSX = props => {
    
     return (<>
     
-        <section className="questionChild">
+        <section className="questionResponse">
         
             <div>
               <h3>Question: {props.question.question}</h3>

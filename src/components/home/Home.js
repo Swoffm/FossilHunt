@@ -30,7 +30,7 @@ const Home = (props) => {
                             </div>
                             <div id="homeImageFour">
                                 {
-                                    !user ? <Link to="/login"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596741239/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_1_k2dhqy.png" /></Link> : <Link to="/fossilcollection"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596741239/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_1_k2dhqy.png" /></Link>
+                                    !user ? <Link to="/login"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596754436/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_3_qy5i1r.png" /></Link> : <Link to="/fossilcollection"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596754436/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_3_qy5i1r.png" /></Link>
                                 }
 
 

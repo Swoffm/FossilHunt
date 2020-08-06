@@ -47,7 +47,7 @@ box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
 
 }
 .questionChild {
-    color: white;
+    /* color: white; */
     background-color: var(--forum-card-background);
 box-shadow: .2em .2em .3em var(--forum-card-shadow);
  font-size: 1.5em;
@@ -64,3 +64,41 @@ box-shadow: .2em .2em .3em var(--forum-card-shadow);
     /* border: .1em solid royalblue;  */
     margin: .5em;
 }
+
+/* styling below is for the question and response view  */
+
+.questionResponse{
+    background-color: var(--forum-card-background);
+    box-shadow: .2em .2em .3em var(--forum-card-shadow);
+     font-size: 1.5em;
+       width: 100%;
+        padding-left: .2em;
+        margin: 1em 0;
+}
+.responseSection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.responseChild {
+    padding: .5em 1em;
+    font-size: 1.2em;
+    box-shadow: .2em .2em .3em var(--forum-card-shadow);
+    width: 50%;
+        margin: 1em 0;
+
+}
+
+.questionResponse:hover, .responseChild:hover {
+    box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
+}
+.responseBack, .addbtn{
+    margin: .5em .5em;
+
+}
+.responsebtn {
+margin: .5em .5em;
+}
+
+

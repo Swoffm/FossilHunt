@@ -9,7 +9,7 @@ const NewResponseJSX = (props) => {
 
     return (
         <>
-        <button className="backBtn" onClick={props.backBtn}>Back</button>
+        <button className="responseBack forumbtn" onClick={props.backBtn}>Back</button>
 <form className="formResponse">
     <h1>New Response</h1>
 <fieldset>
@@ -26,7 +26,7 @@ const NewResponseJSX = (props) => {
         /></div>
     </div>
 <div className="formChild">
-    <button className="submitbtn"
+    <button className="submitbtn forumbtn"
         type="button"
         disabled={props.isLoading}
         onClick={props.newResponse}

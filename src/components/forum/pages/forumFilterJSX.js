@@ -8,10 +8,10 @@ const ForumFilterJSX = props => {
     return (
     
     <section className="forum--select">
-  <label htmlFor="state">Filter: </label>
+  
 
 
-        <select id="state" className="forum--select-location" onChange={props.filterLocationChange}>
+        <select id="state" className="forum--select" onChange={props.filterLocationChange}>
       
     <option>Select State</option>
 <option value="Alabama">Alabama</option>

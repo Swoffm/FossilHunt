@@ -37,7 +37,7 @@ const Forum = (props) => {
                 <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596738372/Fossil_Collection_7_kk95ps.png" />
             </div>
                 <div>
-                    {UserId ? <button className="addbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
+                    {UserId ? <button className="addbtn forumbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
                 </div>
                 <div>
                     {<ForumFilter filterLocationChange={filterLocationChange} {...props}/>}
