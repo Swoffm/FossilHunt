@@ -189,37 +189,25 @@ small {
   
   #logo:hover {
     border: .2em solid white;
-  
+  margin: 0;
   }
+
   
-  .logo {
-    height: 100%;
-   flex: 1;
-    width: 100%;
-    justify-content: center;
-    border: .2em solid white;
+  #logo {
+   border-radius: 25%;
+   
+   margin: 0;
+   padding: 0;
+   /* border: .2em solid green; */
+height: 2.5em;
 
   }
-  #logo {
-    height: 3em;
-    border: .2em solid black;
-    margin-top: 1em;
-    margin-left: 2em;
-  }
-  .mobile--image {
-    display: block;
-    flex: 1;
-    height: 100%;
-  }
-  .mobile--image > img {
-    display: block;
-    flex: 1;
-    height: 75%;
-  }
-  nav {
-    flex: 1;
-  }
+.myTopnav > Link {
   
+} 
+
+
+
   
 }
 
@@ -233,7 +221,7 @@ body {margin:0;font-family:Arial}
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
 }
 
 .topnav a {
@@ -290,7 +278,7 @@ body {margin:0;font-family:Arial}
 }
 
 .topnav a:hover, .dropdown:hover .dropbtn {
-  background-color: #555;
+  /* background-color: #555; */
   color: white;
 }
 

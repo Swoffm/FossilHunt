@@ -24,10 +24,12 @@ const FossilNav = (props) => {
         <div>
 
             <div className="topnav" id="myTopnav">
-            <Link className="nav-link" to="/">
-                            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596054493/The_Hunt_t90gdj.jpg" alt="Fossil Hunt Logo" />
+               
+            <Link to="/">
+                            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596132712/9526933E-5F6A-4576-BEE3-F3E8EF719C42_m68k00.jpg" alt="Fossil Hunt Logo" />
 
                         </Link>
+                     
                 <Link className="active" to="/">
                             Home
                          </Link>
@@ -44,82 +46,11 @@ const FossilNav = (props) => {
                             !user ? <Link className="nav-link" to="/login"> Log In </Link> : <Link className="nav-link" to="/account"> Account Info </Link>
                         }
 
-                {/* <div className="dropdown">
-                    <button className="dropbtn">Dropdown
-                     <i className="fa fa-caret-down"></i>
-                    </button>
-                    <div className="dropdown-content">
-                        <Link className="active" to="/">
-                            Home
-                         </Link>
-
-                        <Link className="nav-link" to="/forum">
-                            Fossil Forum
-                            </Link>
-
-                        {
-                            user ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
-                        }
-
-                        {
-                            !user ? <li><Link className="nav-link" to="/login"> Log In </Link></li> : <li><Link classNameName="nav-link" to="/account"> Account Info </Link></li>
-                        }
-
-
-
-                    </div>
-                </div> */}
+                
 
                 <a className="icon" onClick={dropDown}>&#9776;</a>
             </div>
 
-
-
-            {/* <header>
-                <div className="logoParent">
-                    <div className="logo">
-                        <Link className="nav-link" to="/">
-                            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596054493/The_Hunt_t90gdj.jpg" alt="Fossil Hunt Logo" />
-
-                        </Link>
-                    </div>
-                </div>
-                <nav className="topnav" id="myTopnav">
-                    <ul className="container--wrapper">
-                        <li className="firstItem">
-
-
-
-                            <ul className="dropDown">
-
-
-                                <li>
-                                    <Link className="nav-link" to="/">
-                                        Home
-                         </Link>
-                                </li>
-                                <li>
-                                    <Link className="nav-link" to="/forum">
-                                        Fossil Forum
-                            </Link>
-                                </li>
-                                {
-                                    user ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
-                                }
-
-                                {
-                                    !user ? <li><Link className="nav-link" to="/login"> Log In </Link></li> : <li><Link classNameName="nav-link" to="/account"> Account Info </Link></li>
-                                }
-
-
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-
-
-
-            </header> */}
         </div>
     );
 };
