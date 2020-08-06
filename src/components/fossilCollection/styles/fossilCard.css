@@ -9,8 +9,8 @@
     --fossil-card-background: #262626;
     --fossil-card-shadow: #333333; */
 
-    --fossil-background: #0d0d0d;
-    --fossil-card-background: #0d0d0d;
+    --fossil-background: #353131;
+    --fossil-card-background: #2b2121;
     --fossil-card-shadow: #000000;
     --fossil-card-btn: #D1CFCC;
     --fossil-card-font-color:black;
@@ -122,3 +122,6 @@ width: 100%;
 width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  
+}
