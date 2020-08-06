@@ -1,17 +1,61 @@
+
+
+:root {
+    /* --logo-background-color: #731504; 
+    example 
+    color: var(--logo--white);
+    */
+    /* --forum-background: #1a1a1a;
+    --forum-card-background: #262626;
+    --forum-card-shadow: #333333; */
+
+    --forum-background: #353131;
+    --forum-card-background: #2b2121;
+    --forum-card-shadow: #000000;
+    --forum-card-btn: rgb(255, 255, 255);
+    --forum-card-font-color:black;
+    --forum--logo-head-color: #44fb8d;
+
+    
+}
+Link {
+    color: none;
+    text-decoration: none;
+}
+
+
 .forumParent{
     display: flex;
     flex-wrap: wrap;
+    color: white;
+    /* justify-content: center; */
+}
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 3px solid #4b4646;
+    width: 100%;
+}
+div {
+    color: white;
 }
 
-.questionChild{
-    border: .3em solid royalblue;
-   width: 100%;
+.questionChild {
+    color: white;
+    background-color: var(--forum-card-background);
+box-shadow: .4em .4em var(--forum-card-shadow);
+ font-size: 1.5em;
+   width: 75%;
     padding-left: .2em;
     margin: .5em 0;
 }
-
+.questionChild :link {
+    color: white;
+    text-decoration: none;
+}
 
  .responseChild {
-    border: .1em solid royalblue; 
+    /* border: .1em solid royalblue;  */
     margin: .5em;
 }

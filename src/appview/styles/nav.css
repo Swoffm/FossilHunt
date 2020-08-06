@@ -26,31 +26,35 @@ background-color: var(--card-bg); */
 }
 
 
-/* below is the styling for the logo image */
-.logoParent {
-  display: flex;
-  height: 100%;
-  align-content: center;
-  /* flex-wrap: wrap; */
- 
-}
 #logo:hover {
   border: .2em solid white;
 
 }
 
-.logo {
-  height: 100%;
- flex: 1;
-  width: 100%;
-  justify-content: center;
-}
+
 #logo {
   height: 5em;
   border: .2em solid black;
   margin-top: 1em;
   margin-left: 2em;
 }
+#logo2 {
+  height: 7em;
+  /* border: .2em solid black; */
+  /* margin-top: 1em;
+  margin-left: 2em; */
+  float: right;
+}
+#logo2:hover {
+  border: .2em solid white;
+
+}
+#linkToHome {
+  margin: 0;
+  padding:0;
+  float: right;
+}
+
 .mainlogo {
   
   text-align: center;
@@ -132,7 +136,9 @@ small {
     display: none;
   }
 
-
+#logo {
+  display: none;
+}
 
  
 
@@ -142,16 +148,23 @@ small {
 
 @media only screen and (max-width: 600px) {
  
-  
+  .topnav a {
+  font-size: .5em;
+  font-size: 1px;
+    
+  }
   #logo:hover {
     border: .2em solid white;
   margin: 0;
   }
+  #logo2 {
+    display: none;
+  }
 
   
   #logo {
-   border-radius: 25%;
-   
+   border-radius: 50%;
+   display: block;
    margin: 0;
    padding: 0;
    /* border: .2em solid green; */
@@ -183,7 +196,7 @@ body {margin:0;font-family:Arial}
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 1.3em;
 }
 
 .active {

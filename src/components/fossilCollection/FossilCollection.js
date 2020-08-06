@@ -40,6 +40,7 @@ const FossilCollection = (props) => {
     
 
     useEffect(() => {
+        
         getFossil()
     }, [])
 
@@ -47,7 +48,10 @@ const FossilCollection = (props) => {
     return (
      
         <section className="fossil--grandparent">
-        <div><h1>Fossil Collection</h1></div> 
+            <div className="banner">
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596732676/Fossil_Collection_6_py6omt.png" />
+            </div>
+      
          <div className="fossil--buttons">
         <div className="fossil--add">
             <button className="addButton" onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>

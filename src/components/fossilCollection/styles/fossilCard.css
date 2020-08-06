@@ -9,18 +9,19 @@
     --fossil-card-background: #262626;
     --fossil-card-shadow: #333333; */
 
-    --fossil-background: #353131;
+    --fossil-background: #9c7070;
     --fossil-card-background: #2b2121;
     --fossil-card-shadow: #000000;
-    --fossil-card-btn: #2b2121;
+    --fossil-card-btn: rgb(255, 255, 255);
     --fossil-card-font-color:black;
+    --fossil--logo-head-color: #44fb8d;
 
     
 }
 
 
 .fossil--grandparent {
-    background-color: var(--fossil-background);
+  
     color: white;
     height: 100%;
     
@@ -80,6 +81,8 @@ box-shadow: .6em .6em .6em .6em var(--fossil-card-shadow);
     background-color: var(--fossil-card-btn);
     color: var(--fossil-card-font-color);
     width: 25%;
+    /* background-image: linear-gradient(var(--fossil--logo-head-color), blue); */
+  
 }
 
 
@@ -115,6 +118,17 @@ text-align: right;
 width: 100%;
 }
 
+.fossil--select-location,
+    .fossil--select-genus,
+    .addButton {
+        background-color: var(--fossil-card-btn);
+        color: var(--fossil-card-font-color);
+    margin: 0 .3em;
+    }
+    .addButton {
+        margin-top: 2em;
+    }
+
 
 /* styling for the img tag child of fossilImage div below */
 .fossil--image {
@@ -122,11 +136,16 @@ width: 100%;
 width: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+/* below is fossil collection banner */
 
+
+@media only screen and (max-width: 600px) {
+.banner {
+    display: none;
+}
     .deleteButton, .detailsEdit, .detailsButton{
-        background-color: var(--fossil-card-btn);
-        color: var(--fossil-card-font-color);
+        /* background-color: var(--fossil-card-btn); */
+        /* color: var(--fossil-card-font-color); */
         width: 100%;
     }
     .fossil--select-location,
@@ -134,7 +153,8 @@ width: 100%;
     .addButton {
         background-color: var(--fossil-card-btn);
         color: var(--fossil-card-font-color);
-        width: 50%;
+        width: 45%;
+
     }
     .fossil--add {
         text-align: center;

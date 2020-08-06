@@ -1,4 +1,17 @@
+
+
 .appView {
     /* background-color: #60625A; */
 
+}
+
+:root {
+   --body--color: #272727;
+
+    
+}
+
+body {
+background-color: var(--body--color);
+color: white;
 }

@@ -26,7 +26,8 @@ const FossilNav = (props) => {
             <div className="topnav" id="myTopnav">
                
             <Link to="/">
-                            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596132712/9526933E-5F6A-4576-BEE3-F3E8EF719C42_m68k00.jpg" alt="Fossil Hunt Logo" />
+            <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596723869/Untitled_design_cjhxuz.jpg" />
+                            {/* <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596132712/9526933E-5F6A-4576-BEE3-F3E8EF719C42_m68k00.jpg" alt="Fossil Hunt Logo" /> */}
 
                         </Link>
                      
@@ -46,7 +47,9 @@ const FossilNav = (props) => {
                             !user ? <Link className="nav-link" to="/login"> Log In </Link> : <Link className="nav-link" to="/account"> Account Info </Link>
                         }
 
-                
+<Link id="linkToHome" to="/">
+       <img id="logo2" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596728885/The_Fossil_Hunt_k2wqrd.jpg" />
+       </Link>
 
                 <a className="icon" onClick={dropDown}>&#9776;</a>
             </div>

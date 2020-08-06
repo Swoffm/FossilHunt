@@ -1,9 +1,11 @@
-import React from "react"
+import React, { useEffect } from "react"
 import { Link } from "react-router-dom";
 import "./styles/home.css"
+import Helper from "../../HelperFunctions/Helper"
 
 const Home = (props) => {
 
+    let user = sessionStorage.getItem("userInfo")
 
 
     return (
@@ -15,42 +17,38 @@ const Home = (props) => {
                     </div>
                     <section className="home--card-parent">
                         {/* <div className="home--card-img"> */}
-            <div className="home--card-child">
-                <div id="mobileImg">
-                       <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596723665/Retro_Colors_Costing_Business_-_Infographics_lmzkcs.jpg" />
-                       </div>
-                       <div id="homeImageOne">
-                           <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207675/Beige_and_Gray_Minimalist_Quote_Instagram_Post_rcmugj.jpg" />
-                       </div>
-                       <div id="homeImageTwo">
-                           <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596207961/Beige_and_Gray_Minimalist_Quote_Instagram_Post_1_nv2yc8.jpg" />
-                       </div>
-                           
-                         
+                        <div className="home--card-child">
+                            <div id="mobileImg">
+                                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" />
                             </div>
-                       
-            
+                            <div id="homeImageTwo">
+                                {
+                                    !user ? <Link to="/login"> <img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" /></Link> : <Link to="/account"> <img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" /></Link>
+                                }
+
+
+                            </div>
+                            <div id="homeImageFour">
+                                {
+                                    !user ? <Link to="/login"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596741239/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_1_k2dhqy.png" /></Link> : <Link to="/fossilcollection"><img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596741239/UPLOAD_FOSSIL_FINS_TO_FOSSIL_COLLECTION_ACCOUNT_1_k2dhqy.png" /></Link>
+                                }
+
+
+                            </div>
+                            <div id="homeImageOne">
+
+
+                                <Link to="/forum"> <img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740507/Connect_with_other_fossil_hunters_using_The_Fossil_Hunt_forum_1_k29obg.png" /></Link>
+
+                            </div>
+
+                        </div>
+
+
                         {/* </div> */}
                     </section>
-                    <h1>Welcome to Fossil Hunt</h1>
-                    <p>Fossil Hunt is a website for fossil collectors. Fossil Hunt supplies collectors with the ability to keep track of their fossils and communicate with other fossil hunters.</p>
-                </section>
-                <section className="home--child">
-                    <h3>Features</h3>
-                    <section>
-                        <Link className="login-link" to="/login">
-                            Create A Fossil Collection
-                    </Link>
-                        <br />
-                        <p className="collection_desc">Users can catalog the fossils they have collected by uploading pictures and filling in details, such as location, geological timeperiod ..ect </p>
-                    </section>
-
-                    <section> <Link className="login-link" to="/login">
-                        Talk To Other Fossil Collectors
-                    </Link>
-                    </section>
-
-                </section>
+                  </section>
+               
             </section>
         </>
     )
