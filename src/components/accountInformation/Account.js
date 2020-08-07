@@ -24,7 +24,9 @@ let userId = Helper.getUserId()
 
 
     useEffect(() => {
+       
         getUser(userId)
+       
     }, [])
 
 

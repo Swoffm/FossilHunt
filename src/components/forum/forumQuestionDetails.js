@@ -31,15 +31,15 @@ const ForumQuestionDetails = props => {
 
     return (<>
         <div className="FossilResponse_parent">
-            <Link to={`/forum`}><button>Back</button></Link>
-    {userId ? <Link to={`/forumResponse/${props.match.params.questionId}/new`}><button>Respond</button> </Link> : null}
+            <Link to={`/forum`}><button className="responsebtn forumbtn">Back</button></Link>
+    {userId ? <Link to={`/forumResponse/${props.match.params.questionId}/new`}><button className="responsebtn forumbtn">Respond</button> </Link> : null}
          
             <section>
 
                 <ForumQuestionDetailsJSX question={question} {...props} />
             </section>
 
-            <section>
+            <section className="responseSection">
                 {response}
             </section>
         </div>

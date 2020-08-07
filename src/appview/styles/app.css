@@ -1,4 +1,88 @@
-.appView {
-    /* background-color: #60625A; */
+
+:root {
+
+
+  
+
+    --forum-background: #f0efef;
+    --forum-card-background: #ffffff;
+    --forum-card-shadow: #f0ebeb;
+    --forum-card-btn: rgb(255, 255, 255);
+    --forum-card-font-color:rgb(3, 3, 3);
+    --forum--logo-head-color: #44fb8d;
+
+
+
+    
+    --body--color: white;
+
+    --fossil-background: #9c7070;
+    --fossil-card-background: #2b2121;
+    --fossil-card-shadow: #000000;
+    --fossil-card-btn: rgb(255, 255, 255);
+    --fossil-card-font-color:black;
+    --fossil--logo-head-color: #44fb8d;
+
+    --form-background-color: rgb(235, 231, 231);
+    --form-login-color: black;
+    --form-shadow: black;
+    --form-border: black;
+    --button-site-background-color: black;
+}
+
+
+
+
+body {
+background-color: var(--body--color);
 
 }
+
+/* all buttons that are on a forum */
+.forumbtn {
+    font-size: 1em;
+    padding: .5em;
+    width: 5em;
+    height: 75%;
+    color: var(--form-background-color);
+    background-color: var(--button-site-background-color);
+  
+}
+
+.forum--select {
+    font-size: 1em;
+color: white;
+height: 75%;
+background-color: var(--button-site-background-color);
+border: 0;
+}
+
+#state {
+    text-align: center;
+    margin-top: .5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.banner {
+      height: 10%;
+  }
+
+  .banner > img {
+      height: 100%;
+      width: 100%;
+  }
+.banner {
+    width: 100%;
+}
+
+
+.btnAcct {
+    margin: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+

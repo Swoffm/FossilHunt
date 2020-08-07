@@ -42,7 +42,7 @@ const LoginJSX = (props) => {
 
                     </div>
                     <div className="formChild">
-                        <button className="submitbtn"
+                        <button className="forumbtn"
                             type="button"
                         disabled={props.isLoading}
                          onClick={props.loginCheck}

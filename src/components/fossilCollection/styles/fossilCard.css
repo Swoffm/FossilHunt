@@ -1,26 +1,9 @@
 
 
-:root {
-    /* --logo-background-color: #731504; 
-    example 
-    color: var(--logo--white);
-    */
-    /* --fossil-background: #1a1a1a;
-    --fossil-card-background: #262626;
-    --fossil-card-shadow: #333333; */
-
-    --fossil-background: #0d0d0d;
-    --fossil-card-background: #0d0d0d;
-    --fossil-card-shadow: #000000;
-    --fossil-card-btn: #D1CFCC;
-    --fossil-card-font-color:black;
-
-    
-}
 
 
 .fossil--grandparent {
-    background-color: var(--fossil-background);
+ 
     color: white;
     height: 100%;
     
@@ -38,7 +21,6 @@
 
 
 .fossilParent {
-/* border: 3px solid royalblue; */
 display: flex; 
 flex-wrap: wrap;
 justify-content: space-evenly;
@@ -80,6 +62,8 @@ box-shadow: .6em .6em .6em .6em var(--fossil-card-shadow);
     background-color: var(--fossil-card-btn);
     color: var(--fossil-card-font-color);
     width: 25%;
+    /* background-image: linear-gradient(var(--fossil--logo-head-color), blue); */
+  
 }
 
 
@@ -115,6 +99,17 @@ text-align: right;
 width: 100%;
 }
 
+.fossil--select-location,
+    .fossil--select-genus,
+    .addButton {
+        background-color: var(--fossil-card-btn);
+        color: var(--fossil-card-font-color);
+    margin: 0 .3em;
+    }
+    .addButton {
+        margin-top: 2em;
+    }
+
 
 /* styling for the img tag child of fossilImage div below */
 .fossil--image {
@@ -122,3 +117,50 @@ width: 100%;
 width: 100%;
 }
 
+/* below is fossil collection banner */
+
+
+@media only screen and (max-width: 600px) {
+
+    .deleteButton, .detailsEdit, .detailsButton{
+        width: 100%;
+    }
+    .fossil--select-location,
+    .fossil--select-genus,
+    .addButton {
+        background-color: var(--fossil-card-btn);
+        color: var(--fossil-card-font-color);
+        width: 45%;
+
+    }
+    .fossil--add {
+        text-align: center;
+    }
+
+    .fossilParent {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+        }
+        
+        
+        
+        .fossilCard {
+        border: 3px solid var(--fossil-card-background);
+        background-color: var(--fossil-card-background);
+        box-shadow: .4em .4em var(--fossil-card-shadow);
+        padding: .5em .9em;
+        margin: 1em 0;
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        }
+        
+        .fossilCard:hover {
+        box-shadow: .6em .6em .6em .6em var(--fossil-card-shadow);
+        
+        }
+}

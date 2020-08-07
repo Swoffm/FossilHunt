@@ -5,25 +5,22 @@ const ForumNewJSX = props => {
 
     return (
     <>
-            <button className="backBtn" onClick={props.backBtn}>Back</button>
-    <form className="forumQuestion">
-        <h1>New Question</h1>
+          
+    <form className="forumQuestion forumLogin">
+	
     <fieldset>
         <div className="formgrid">
+		<div className="title-forum"><h1 className="h1title">New Question</h1></div>
             <div className="formChild">
             <label htmlFor="question">Question: </label>
-            <input 
-                type="text"
-                required
-                onChange={props.handleFieldChange}
-                id="question"
-                placeholder="Enter a Question"
-            /></div>
+          
+			<textarea id="question" required type="text" onChange={props.handleFieldChange}  placeholder="Enter a Question"></textarea>
+			</div>
 
         <div className="formChild">
 
             <label htmlFor="location">Location: </label>
-            <select onChange={props.handleFieldChange} id="location">
+            <select className="forum--select" onChange={props.handleFieldChange} id="location">
                 <option>Select State</option>
 	<option value="Alabama">Alabama</option>
 	<option value="Alaska">Alaska</option>
@@ -80,7 +77,7 @@ const ForumNewJSX = props => {
 
         </div>
     <div className="formChild">
-        <button className="submitbtn"
+        <button className="submitbtn forumbtn"
             type="button"
             disabled={props.isLoading}
             onClick={props.newQuestion}

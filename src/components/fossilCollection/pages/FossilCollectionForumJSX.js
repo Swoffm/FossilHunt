@@ -3,11 +3,14 @@ import React from "react";
 
 const FossilCollectionForumJSX = (props) => {
 
-    return (<form className="fossilForum">
+    return (<>
+     <div className="title-forum"><h1 className="h1title">Fossil Collection</h1></div>
+    <form id="fossilForum" className="forumLogin">
+       
         <fieldset>
             <div className="formgrid">
                 <div className="formChild">
-                    <label htmlFor="genus">Genus/Species Name: </label>
+                    <label className="label" htmlFor="genus">Genus/Species Name: </label>
                     <input
                         type="text"
                         required
@@ -133,14 +136,15 @@ const FossilCollectionForumJSX = (props) => {
 
             </div>
             <div className="formChild">
-                <button
+                <button className="forumbtn"
                     type="button"
                     disabled={props.isLoading}
                     onClick={props.newFossil}
                 >Submit</button>
             </div>
         </fieldset>
-    </form >)
+    </form >
+    </>)
 }
 
 export default FossilCollectionForumJSX

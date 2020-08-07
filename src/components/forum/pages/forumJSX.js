@@ -8,10 +8,10 @@ const ForumJSX = props => {
     
     <section className="questionChild">
     <Link to={`/forumQuestion/${props.question.id}`}>
-        <div>
+        <div className="forumQ">
           <h3>Question: {props.question.question}</h3>
         </div>
-        <div>
+        <div className="forumQ">
         Location: {props.question.location}
         </div>
         </Link>

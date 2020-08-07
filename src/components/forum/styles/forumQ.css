@@ -1,19 +1,23 @@
-.parentQForum > form > fieldset {
-    border: .3em solid royalblue;
+
+#response, #question {
+    width: 25em;
+    margin: .2em .3em;
+    
+    height: 5em;
+    font-size: 1em;
 }
 
-.parentQForum > form > h1 {
-    text-align: center;
-    color: pink;
+.title-forum {
+    
+    display: flex;
+    justify-content: center;
+}
+.forumQuestion > textarea {
+
 }
 
-.parentQForum > form {
-    color: pink;
-}
 
-.submitbtn {
-    color: pink;
-    background-color: royalblue;
-    width: 15%;
-    font-size: 50%;
-}
+
+
+
+

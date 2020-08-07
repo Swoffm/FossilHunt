@@ -6,7 +6,7 @@ import Helper from "../../HelperFunctions/Helper"
 import Filter from "./filter/filter"
 
 const FossilCollection = (props) => {
-// ====================change userId Below ============
+
     const UserId = Helper.getUserId();
 
     const [fossil, setFossil] = useState([])
@@ -40,6 +40,7 @@ const FossilCollection = (props) => {
     
 
     useEffect(() => {
+        
         getFossil()
     }, [])
 
@@ -47,10 +48,13 @@ const FossilCollection = (props) => {
     return (
      
         <section className="fossil--grandparent">
-        <div><h1>Fossil Collection</h1></div> 
+            <div className="banner">
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596764889/Fossil_Collection_10_rhzzlc.png" />
+            </div>
+      
          <div className="fossil--buttons">
         <div className="fossil--add">
-            <button onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
+            <button className="addButton forumbtn" onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
             </div>
             <div className="filter--fossil">
                 <Filter filterGenusChange={filterGenusChange} filterLocationChange={filterLocationChange} UserId={UserId} {...props}/>

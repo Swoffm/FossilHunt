@@ -1,48 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/nav.css"
 
+const FossilNav = (props) => {
 
-
-const Nav = (props) => {
-    // let haasUser = true;
     let user = sessionStorage.getItem("userInfo")
+
+    // below code is used for dropdown menu in mobile
+    function dropDown() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        }
+        else {
+            x.className = "topnav";
+        }
+    }
+
+
     return (
-        <header>
-            <div className="logoParent">
-                <div className="logo">
-                    <Link className="nav-link" to="/">
-                        <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596054493/The_Hunt_t90gdj.jpg" alt="Fossil Hunt Logo" />
+        <div>
 
-                    </Link>
-                </div> <nav>
-                        <ul className="container">
-                            <li>
-                                <Link className="nav-link" to="/">
-                                    Home
-                        </Link>
-                            </li>
-                            <li>
-                                <Link className="nav-link" to="/forum">
-                                    Fossil Forum
-                        </Link>
-                            </li>
-                            {
-                                user ? <li><Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link></li> : null
-                            }
+            <div className="topnav" id="myTopnav">
 
-                            {
-                                !user ? <li><Link className="nav-link" to="/login"> Log In </Link></li> :  <li><Link className="nav-link" to="/account"> Account Info </Link></li>
-                            }
-                            
+                <Link to="/">
+                    <img id="logo" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596723869/Untitled_design_cjhxuz.jpg" />
+                    <img id="logoDeskTop" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596766511/The_Fossil_Hunt_1_y2ngyz.jpg" />
+                </Link>
 
-                        </ul>
-                    </nav>
-                
+                <Link to="/">
+                    Home
+                         </Link>
 
+                <Link className="nav-link" to="/forum">
+                    Fossil Forum
+                            </Link>
+
+                {
+                    user ? <Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link> : null
+                }
+
+                {
+                    !user ? <Link className="nav-link" to="/login"> Log In </Link> : <Link className="nav-link" to="/account"> Account Info </Link>
+                }
+
+
+                <a className="icon" onClick={dropDown}>&#9776;</a>
             </div>
-        </header>
+
+        </div>
     );
 };
 
-export default Nav;
+export default FossilNav;

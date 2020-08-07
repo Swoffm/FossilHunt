@@ -1,45 +1,45 @@
-/* variables for colors example
-:root {
-    --card-bg: darkgray;
-}
-background-color: var(--card-bg); */
 
 :root {
-    /* --logo-background-color: #731504; */
+    
     --logo-background-color: black;
     --logo--white: white;
-    /* --logo--white: #F7EEE8; */
-    /* --nav-font-color: #BE7C70; */
+  
     --nav-font-color: white;
-    /* --nav-brandy: #B88C7C; */
+  
     --nav-brandy: black;
     
 }
-/* below is the styling for the logo image */
-.logoParent {
+
+
+.nav--image-parent {
   display: flex;
-  height: 100%;
-  align-content: center;
-  /* flex-wrap: wrap; */
- 
-}
-#logo:hover {
-  border: .2em solid white;
-
 }
 
-.logo {
-  height: 100%;
- flex: 1;
-  width: 100%;
-  justify-content: center;
+.nav--image-parent > .nav--image:hover ~ .container > li {
+ display: block;
 }
+
+
+
+
+
 #logo {
   height: 5em;
   border: .2em solid black;
   margin-top: 1em;
   margin-left: 2em;
 }
+#logo2 {
+  height: 7em;
+  float: right;
+}
+
+#linkToHome {
+  margin: 0;
+  padding:0;
+  float: right;
+}
+
 .mainlogo {
   
   text-align: center;
@@ -55,11 +55,8 @@ nav {
 }
 
 
-.container > li {
-  
-    border: .1em solid rgb(0, 0, 0);
 
-}
+
 small {
     font-size: 75%;
   }
@@ -91,6 +88,7 @@ small {
     background-color: var(--nav-brandy);
     list-style-type: none;
   }
+
   
   .nav-link {
     color: var(--logo--white);
@@ -104,4 +102,181 @@ small {
   }
 
 
+  .navImage {
+    height: 100%;
+    width: 100%;
+  }
+
+  .nav--image-parent {
+    height: 50%;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobile--image {
+    display: none;
+  }
+
+  #logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0;
+    padding: 0;
+ height: 2.5em;
+ 
+   }
+
+   #logoDeskTop {
+    display: block;
+    margin: 0;
+    padding: 0;
+ height: 4em;
+   }
+   
+ 
+
+
   /* ==============================ADD MEDIA BELOW FONT SIZE IS IMPORTANT ============ */
+  @media only screen and (min-width: 601px) {
+    #logo {
+      display: none;
+    }
+  }
+
+@media only screen and (max-width: 600px) {
+  #logoDeskTop {
+    display: none;
+  }
+ 
+  .topnav a {
+  font-size: .5em;
+  font-size: 1px;
+    
+  }
+
+  #logo:hover {
+    border: .2em solid white;
+  margin: 0;
+  }
+
+  
+
+  
+ 
+  
+}
+
+
+
+/* ========================================== */
+
+
+
+body {margin:0;font-family:Arial}
+
+.topnav {
+  overflow: hidden;
+  background-color: black;
+}
+
+/* ===============try to float the fossil head right================== */
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+
+.active {
+  background-color: #4ca0af;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;    
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.topnav a:hover, .dropdown:hover .dropbtn {
+  /* background-color: #555; */
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+
+

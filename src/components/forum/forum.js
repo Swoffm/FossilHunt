@@ -33,19 +33,21 @@ const Forum = (props) => {
     return (
         <>
             <section className="forumParent">
-            <div>
-                    <h1>Fossil Forum</h1>
-
-                </div>
+            <div className="banner">
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596764302/Fossil_Collection_9_zkjhw4.png" />
+            </div>
                 <div>
-                    {UserId ? <button className="addbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
+                    {UserId ? <button className="addbtn forumbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}
                 </div>
                 <div>
                     {<ForumFilter filterLocationChange={filterLocationChange} {...props}/>}
                      </div>
+                     <div className="content">
                 {question.map(element =>  fossilLocation == null || fossilLocation == "" ||
                  fossilLocation == "Select State" ? <ForumJSX key={element.id} question={element} {...props} /> : 
                  fossilLocation == element.location ? <ForumJSX key={element.id} question={element} {...props} /> : null)}
+
+</div>
             </section>
         </>)
 

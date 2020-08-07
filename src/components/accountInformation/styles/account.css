@@ -1,5 +1,4 @@
 .accountParent {
-    border: .3em solid black;
     text-align: center;
     padding: 1em 0;
     display: flex;
@@ -7,20 +6,35 @@
 }
 
 .accountChild {
-    border: .3em solid black;
 display: flex;
 flex-wrap: wrap;
 justify-content: center;
 }
 .accountChild > div {
     width: 100%;
-    
 }
-.accountChild > div > button {
-    /* width: 100%; */
-    padding: .2em 10em;
-    background-color: pink;
+.acctbtn {
+   text-align: center;
 }
+.linkPassword {
+    margin: .5em 0;
+}
+
+/* this is the classname for email and username */
+.userInfo {
+    margin: .5em 0;
+    font-size: 1.5em;
+}
+/* ==================title is below h1  */
+.acct--Title {
+    display: flex;
+    justify-content: center;
+}
+.acct--Title > h1 {
+    font-size: 2em;
+    border-bottom: 2px solid black;
+}
+
 
 .userImage-selection {
     margin: .5em 0;
@@ -35,11 +49,10 @@ width: 25%;
 }
 
 .userImageSection {
-    border: 3px solid pink;
+  
     width: 100%;
 padding: .5em .9em;
 margin: 1em 0;
-/* width: 25%; */
 display: flex;
 flex-wrap: wrap;
 
@@ -48,8 +61,10 @@ flex-wrap: wrap;
 .cloud--imageSection > div {
     display: inline-block;
     display: flex;
-    border: 3px solid pink;
+   
     align-content: center;
+    justify-content: center;
+    
    
     
 }
@@ -57,14 +72,13 @@ flex-wrap: wrap;
     margin: 0;
 }
 
-.image{
-    border: 3px solid pink;
-    
+.cloud--imageSection {
+    border: 3px solid black;
 }
 
 .cloud--image {
     border-radius: 50%;
-    width: 25%;
+    width: 10%;
     
 }
 
@@ -73,4 +87,22 @@ flex-wrap: wrap;
 }
 .cloud--image:active {
     border: 2px solid black;
+}
+
+
+/* ================================styles below is for update account section ========================= */
+
+.email--username {
+    font-size: 1em;
+  
+    border: 2px solid black;
+
+}
+
+
+.email--username > section {
+    margin: 1.5em .4em;
+}
+.email--username > section > input {
+    font-size: 1.5em;
 }

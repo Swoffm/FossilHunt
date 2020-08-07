@@ -36,14 +36,16 @@ const ForumNew = (props) => {
       }
 
       const backBtn = () => {
-        props.history.goBack()
+        props.history.push("/forum")
     }
 
 
-    return(
+    return(<>
+    <button className="backQuestion forumbtn" onClick={backBtn}>Back</button>
     <div className="parentQForum">
     <ForumNewJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newQuestion={newQuestion} {...props}/>
     </div>
+    </>
     )
 }
 
