@@ -1,16 +1,31 @@
+.parentQForum > form {
+    border: 0;
+    height: 75%;
+    background-color: var(--form-background-color);
+color: var(--form-login-color);
+    width: 35%;
+    border: .1em solid var(--form-border);
+    border: 0;
+    padding-left: 0%;
+   text-align: center;
+background: linear-gradient(rgb(243, 247, 244), var(--form-background-color), var(--form-background-color), var(--form-background-color));
+box-shadow: .2em .2em rgba(252, 252, 252, 0.863);
+}
 .parentQForum > form > fieldset {
-    border: .3em solid royalblue;
+    border: 0;
 }
 
 .parentQForum > form > h1 {
     text-align: center;
-    color: pink;
+    color: black;
 }
 
 .parentQForum > form {
-    color: pink;
+    color: black;
+}
+.parentQForum  {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.submitbtn {
-    
-}

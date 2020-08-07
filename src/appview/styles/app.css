@@ -40,3 +40,8 @@ border: 0;
     flex-wrap: wrap;
     align-items: center;
 }
+
+
+.banner {
+    width: 100%;
+}

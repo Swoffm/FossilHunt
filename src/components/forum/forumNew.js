@@ -40,10 +40,12 @@ const ForumNew = (props) => {
     }
 
 
-    return(
+    return(<>
+    <button className="backQuestion forumbtn" onClick={props.backBtn}>Back</button>
     <div className="parentQForum">
     <ForumNewJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newQuestion={newQuestion} {...props}/>
     </div>
+    </>
     )
 }
 

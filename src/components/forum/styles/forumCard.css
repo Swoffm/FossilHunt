@@ -97,8 +97,9 @@ box-shadow: .2em .2em .3em var(--forum-card-shadow);
     margin: .5em .5em;
 
 }
-.responsebtn {
+.responsebtn, .backQuestion {
 margin: .5em .5em;
 }
+
 
 
