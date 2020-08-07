@@ -54,7 +54,7 @@ const FossilCollection = (props) => {
       
          <div className="fossil--buttons">
         <div className="fossil--add">
-            <button className="addButton" onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
+            <button className="addButton forumbtn" onClick={() => {props.history.push("/fossilcollection/new")}}>Add</button>
             </div>
             <div className="filter--fossil">
                 <Filter filterGenusChange={filterGenusChange} filterLocationChange={filterLocationChange} UserId={UserId} {...props}/>

@@ -41,12 +41,12 @@ let id = 1;
     
     <section className="fossil--select">
 
-        <select className="fossil--select-location" name="location" onChange={props.filterLocationChange}>
+        <select className="fossil--select-location forum--select" name="location" onChange={props.filterLocationChange}>
         <option>Location</option>
            {optionLocation.map(element => <option value={element} key={id++}>{element}</option>)}
         </select>
 
-        <select className="fossil--select-genus" name="genus" onChange={props.filterGenusChange}>
+        <select className="fossil--select-genus forum--select" name="genus" onChange={props.filterGenusChange}>
         <option>genus/species</option>
            {optionGenus.map(element => <option value={element} key={id++}>{element}</option>)}
         </select>
