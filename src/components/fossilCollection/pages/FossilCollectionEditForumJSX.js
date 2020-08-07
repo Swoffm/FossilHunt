@@ -5,7 +5,10 @@ const FossilCollectionEditForumJSX = (props) => {
 
 
     return(<>
-    <form className="fossilForum">
+    <div className="title-forum">
+        <h1 className="h1title">Fossil Collection</h1>
+        </div>
+    <form className="fossilForum forumLogin">
         <fieldset>
             <div className="formgrid">
                 <div className="formChild">

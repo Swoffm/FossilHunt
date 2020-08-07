@@ -18,9 +18,7 @@ const Home = (props) => {
                     <section className="home--card-parent">
                         {/* <div className="home--card-img"> */}
                         <div className="home--card-child">
-                            <div id="mobileImg">
-                                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" />
-                            </div>
+                          
                             <div id="homeImageTwo">
                                 {
                                     !user ? <Link to="/login"> <img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" /></Link> : <Link to="/account"> <img className="homeImage" src="https://res.cloudinary.com/drcnakesm/image/upload/v1596740371/CREATE_FOSSIL_HUNT_ACCOUNT_hseeac.png" /></Link>

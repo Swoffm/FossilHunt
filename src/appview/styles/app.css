@@ -1,5 +1,7 @@
 
 :root {
+
+
   
 
     --forum-background: #f0efef;
@@ -8,7 +10,12 @@
     --forum-card-btn: rgb(255, 255, 255);
     --forum-card-font-color:rgb(3, 3, 3);
     --forum--logo-head-color: #44fb8d;
+
+
+
+    
     --body--color: white;
+
     --fossil-background: #9c7070;
     --fossil-card-background: #2b2121;
     --fossil-card-shadow: #000000;
@@ -48,6 +55,7 @@ height: 75%;
 background-color: var(--button-site-background-color);
 border: 0;
 }
+
 #state {
     text-align: center;
     margin-top: .5em;
@@ -56,7 +64,14 @@ border: 0;
     align-items: center;
 }
 
+.banner {
+      height: 10%;
+  }
 
+  .banner > img {
+      height: 100%;
+      width: 100%;
+  }
 .banner {
     width: 100%;
 }

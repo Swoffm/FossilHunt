@@ -3,7 +3,7 @@
 
 
 .fossil--grandparent {
-  
+ 
     color: white;
     height: 100%;
     
@@ -21,7 +21,6 @@
 
 
 .fossilParent {
-/* border: 3px solid royalblue; */
 display: flex; 
 flex-wrap: wrap;
 justify-content: space-evenly;
@@ -122,9 +121,7 @@ width: 100%;
 
 
 @media only screen and (max-width: 600px) {
-.banner {
-    display: none;
-}
+
     .deleteButton, .detailsEdit, .detailsButton{
         /* background-color: var(--fossil-card-btn); */
         /* color: var(--fossil-card-font-color); */

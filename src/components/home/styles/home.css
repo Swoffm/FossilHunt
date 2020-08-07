@@ -1,6 +1,4 @@
-:root {
-    --logo-background-color: #731504; 
-}
+
 
 
 .login-link {
@@ -9,14 +7,7 @@
     cursor: pointer;
   }
 
-  .banner {
-      height: 10%;
-  }
-
-  .banner > img {
-      height: 100%;
-      width: 100%;
-  }
+  
 
   .home--parent{
       background-color: black;
@@ -35,47 +26,10 @@
     flex-wrap: wrap;
     flex: 1;
     justify-content: space-around;
-   
+   width: 100%;
 }
 
 
-#homeImageTwo,
- #homeImageFour {
-     width: 30%;
-     margin: 0;
- }
-
- #homeImageOne {
- 
-    width: 30%;
- }
-
-
-#homeImageOne, #homeImageTwo,
- #homeImageFour {
-    
-   /* border: 3px solid white; */
-   margin: .5em;
- }
- #homeImageTwo:link:hover {
-     width: 100%;
-   border: 3px solid white;
-
- }
-
- #homeImageOne > :link >  img, #homeImageTwo > :link >  img,
- #homeImageThree,
- #homeImageFour > :link >  img {
-   /* border: 3px solid white; */
-    width: 100%
- }
- 
-
- #homeImage {
-     /* width: 50%; */
-   border: 10px solid green;
-
- }
 
 
 
@@ -104,6 +58,43 @@
         display: none;
     }
    
+#homeImageTwo,
+#homeImageFour {
+    width: 30%;
+    margin: 0;
+}
+
+#homeImageOne {
+
+   width: 30%;
+}
+
+
+#homeImageOne, #homeImageTwo,
+#homeImageFour {
+   
+  /* border: 3px solid white; */
+  margin: .5em;
+}
+#homeImageTwo:link:hover {
+    width: 100%;
+  border: 3px solid white;
+
+}
+
+#homeImageOne > :link >  img, #homeImageTwo > :link >  img,
+#homeImageThree,
+#homeImageFour > :link >  img {
+  /* border: 3px solid white; */
+   width: 100%
+}
+
+
+#homeImage {
+    /* width: 50%; */
+  border: 10px solid green;
+
+}
    
    
      }
@@ -113,10 +104,46 @@
 
      @media only screen and (max-width: 750px) and (min-width: 250px) {
 
-#homeImageOne, #homeImageTwo, #homeImageThree, #homeImageFour {
-    display: none;
+
+
+
+#homeImageTwo,
+#homeImageFour {
+width: 100%;
+margin: 0;
 }
 
+#homeImageOne {
+
+width: 100%;
+}
+
+
+#homeImageOne, #homeImageTwo,
+#homeImageFour {
+
+/* border: 3px solid white; */
+margin: .5em;
+}
+#homeImageTwo:link:hover {
+width: 100%;
+border: 3px solid white;
+
+}
+
+#homeImageOne > :link >  img, #homeImageTwo > :link >  img,
+#homeImageThree,
+#homeImageFour > :link >  img {
+/* border: 3px solid white; */
+width: 100%
+}
+
+
+#homeImage {
+/* width: 50%; */
+border: 10px solid green;
+
+}
 
 
 

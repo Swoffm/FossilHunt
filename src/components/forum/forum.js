@@ -34,7 +34,7 @@ const Forum = (props) => {
         <>
             <section className="forumParent">
             <div className="banner">
-                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596738372/Fossil_Collection_7_kk95ps.png" />
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596764302/Fossil_Collection_9_zkjhw4.png" />
             </div>
                 <div>
                     {UserId ? <button className="addbtn forumbtn" onClick={() => { props.history.push("/forum/new") }}>Add</button> : null}

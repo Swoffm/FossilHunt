@@ -26,10 +26,7 @@ background-color: var(--card-bg); */
 }
 
 
-#logo:hover {
-  border: .2em solid white;
 
-}
 
 
 #logo {
@@ -45,10 +42,7 @@ background-color: var(--card-bg); */
   margin-left: 2em; */
   float: right;
 }
-#logo2:hover {
-  border: .2em solid white;
 
-}
 #linkToHome {
   margin: 0;
   padding:0;
@@ -136,41 +130,55 @@ small {
     display: none;
   }
 
-#logo {
-  display: none;
-}
+  #logo {
+    border-radius: 50%;
+    display: block;
+    margin: 0;
+    padding: 0;
+    /* border: .2em solid green; */
+ height: 2.5em;
+ 
+   }
 
+   #logoDeskTop {
+    /* border-radius: 50%; */
+    display: block;
+    margin: 0;
+    padding: 0;
+    /* border: .2em solid green; */
+ height: 4em;
+   }
+   
  
 
 
   /* ==============================ADD MEDIA BELOW FONT SIZE IS IMPORTANT ============ */
-
+  @media only screen and (min-width: 601px) {
+    #logo {
+      display: none;
+    }
+  }
 
 @media only screen and (max-width: 600px) {
+  #logoDeskTop {
+    display: none;
+  }
  
   .topnav a {
   font-size: .5em;
   font-size: 1px;
     
   }
+
   #logo:hover {
     border: .2em solid white;
   margin: 0;
   }
-  #logo2 {
-    display: none;
-  }
 
   
-  #logo {
-   border-radius: 50%;
-   display: block;
-   margin: 0;
-   padding: 0;
-   /* border: .2em solid green; */
-height: 2.5em;
 
-  }
+  
+ 
   
 }
 
@@ -256,7 +264,6 @@ body {margin:0;font-family:Arial}
   display: block;
 }
 
-@media screen and (max-width: 600px) {
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
@@ -264,9 +271,9 @@ body {margin:0;font-family:Arial}
     float: right;
     display: block;
   }
-}
 
-@media screen and (max-width: 600px) {
+
+
   .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
@@ -285,6 +292,6 @@ body {margin:0;font-family:Arial}
     width: 100%;
     text-align: left;
   }
-}
+
 
 

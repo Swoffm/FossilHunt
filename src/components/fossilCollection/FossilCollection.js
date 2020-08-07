@@ -49,7 +49,7 @@ const FossilCollection = (props) => {
      
         <section className="fossil--grandparent">
             <div className="banner">
-                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596732676/Fossil_Collection_6_py6omt.png" />
+                <img src="https://res.cloudinary.com/drcnakesm/image/upload/v1596764889/Fossil_Collection_10_rhzzlc.png" />
             </div>
       
          <div className="fossil--buttons">

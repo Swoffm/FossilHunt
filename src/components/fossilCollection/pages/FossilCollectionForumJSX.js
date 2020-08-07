@@ -3,7 +3,10 @@ import React from "react";
 
 const FossilCollectionForumJSX = (props) => {
 
-    return (<form className="fossilForum">
+    return (<>
+     <div className="title-forum"><h1 className="h1title">Fossil Collection</h1></div>
+    <form id="fossilForum" className="forumLogin">
+       
         <fieldset>
             <div className="formgrid">
                 <div className="formChild">
@@ -140,7 +143,8 @@ const FossilCollectionForumJSX = (props) => {
                 >Submit</button>
             </div>
         </fieldset>
-    </form >)
+    </form >
+    </>)
 }
 
 export default FossilCollectionForumJSX

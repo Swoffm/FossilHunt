@@ -9,21 +9,17 @@ const NewResponseJSX = (props) => {
 
     return (
         <>
+       
         <button className="responseBack forumbtn" onClick={props.backBtn}>Back</button>
-<form className="formResponse">
-    <h1>New Response</h1>
+        <div className="title-forum"><h1>New Response</h1></div> 
+<form className="forumLogin">
+  
 <fieldset>
     <div className="formgrid">
     <h3 className="question">{props.question.question}</h3>
         <div className="formChild">
         <label htmlFor="response">Response: </label>
-        <input 
-            type="text"
-            required
-            onChange={props.handleFieldChange}
-            id="response"
-            placeholder="Enter a Response"
-        /></div>
+        <textarea id="response" required type="text" onChange={props.handleFieldChange}  placeholder="Enter a Response"></textarea></div>
     </div>
 <div className="formChild">
     <button className="submitbtn forumbtn"
