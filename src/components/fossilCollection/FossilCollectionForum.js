@@ -38,8 +38,8 @@ const FossilCollectionForum = (props) => {
  
       const newFossil = evt => {
         evt.preventDefault();
-        if (fossil.location == "" || !image || image == "") {
-          window.alert("Please input a location");
+        if (!image || image == "") {
+          window.alert("Image is still processing");
         } else {
           setIsLoading(true);
           // Create the owner and redirect user to owner list

@@ -10,7 +10,7 @@ const FossilCollectionForumJSX = (props) => {
         <fieldset>
             <div className="formgrid">
                 <div className="formChild">
-                    <label htmlFor="genus">Genus/Species Name: </label>
+                    <label className="label" htmlFor="genus">Genus/Species Name: </label>
                     <input
                         type="text"
                         required
@@ -136,7 +136,7 @@ const FossilCollectionForumJSX = (props) => {
 
             </div>
             <div className="formChild">
-                <button
+                <button className="forumbtn"
                     type="button"
                     disabled={props.isLoading}
                     onClick={props.newFossil}

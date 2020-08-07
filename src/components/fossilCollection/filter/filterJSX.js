@@ -47,7 +47,7 @@ let id = 1;
         </select>
 
         <select className="fossil--select-genus forum--select" name="genus" onChange={props.filterGenusChange}>
-        <option>genus/species</option>
+        <option value="genus/species">Genus/Species</option>
            {optionGenus.map(element => <option value={element} key={id++}>{element}</option>)}
         </select>
         

@@ -76,3 +76,13 @@ border: 0;
 .banner {
     width: 100%;
 }
+
+
+.btnAcct {
+    margin: .5em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
