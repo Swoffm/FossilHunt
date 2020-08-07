@@ -6,7 +6,7 @@ import Helper from "../../HelperFunctions/Helper"
 import Filter from "./filter/filter"
 
 const FossilCollection = (props) => {
-// ====================change userId Below ============
+
     const UserId = Helper.getUserId();
 
     const [fossil, setFossil] = useState([])

@@ -125,16 +125,6 @@ const FossilCollectionEditForumJSX = (props) => {
 </select></div>
 
 
-            {/* <div className="formChild">
-
-                <label htmlFor="name">Upload Fossil Image: </label>
-                <input
-                    type="file"
-                    required
-                    onChange={props.handleFieldChange}
-                    id="image"
-                />
-            </div> */}
 
 
 

@@ -28,7 +28,7 @@ const AccountEdit = props => {
             window.alert("Please fill out the form")
         }
         else {
-            console.log(user)
+          
             LoginManager.update(user).then((results) => {
                 setIsLoading(true);
                 setUser(results)

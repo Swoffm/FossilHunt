@@ -41,7 +41,7 @@ const Registration = (props) => {
         setIsLoading(true)
 
         if (userInfo.username === "" || userInfo.password === "" || userInfo.email === "") {
-            console.log(users)
+          
 
             window.alert("Please fill out form")
         }

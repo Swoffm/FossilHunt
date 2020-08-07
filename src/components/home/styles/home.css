@@ -34,10 +34,7 @@
 
 
 .home--card-child > img {
-    /* width: 45%; */
-    /* flex: 1; */
     height: 100%;
-    /* margin: .2em .2em; */
   }
 
   #mobileImg {
@@ -73,7 +70,6 @@
 #homeImageOne, #homeImageTwo,
 #homeImageFour {
    
-  /* border: 3px solid white; */
   margin: .5em;
 }
 #homeImageTwo:link:hover {
@@ -85,13 +81,11 @@
 #homeImageOne > :link >  img, #homeImageTwo > :link >  img,
 #homeImageThree,
 #homeImageFour > :link >  img {
-  /* border: 3px solid white; */
    width: 100%
 }
 
 
 #homeImage {
-    /* width: 50%; */
   border: 10px solid green;
 
 }
@@ -122,7 +116,6 @@ width: 100%;
 #homeImageOne, #homeImageTwo,
 #homeImageFour {
 
-/* border: 3px solid white; */
 margin: .5em;
 }
 #homeImageTwo:link:hover {
@@ -134,13 +127,11 @@ border: 3px solid white;
 #homeImageOne > :link >  img, #homeImageTwo > :link >  img,
 #homeImageThree,
 #homeImageFour > :link >  img {
-/* border: 3px solid white; */
 width: 100%
 }
 
 
 #homeImage {
-/* width: 50%; */
 border: 10px solid green;
 
 }

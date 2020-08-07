@@ -1,17 +1,11 @@
-/* variables for colors example
-:root {
-    --card-bg: darkgray;
-}
-background-color: var(--card-bg); */
 
 :root {
-    /* --logo-background-color: #731504; */
+    
     --logo-background-color: black;
     --logo--white: white;
-    /* --logo--white: #F7EEE8; */
-    /* --nav-font-color: #BE7C70; */
+  
     --nav-font-color: white;
-    /* --nav-brandy: #B88C7C; */
+  
     --nav-brandy: black;
     
 }
@@ -37,9 +31,6 @@ background-color: var(--card-bg); */
 }
 #logo2 {
   height: 7em;
-  /* border: .2em solid black; */
-  /* margin-top: 1em;
-  margin-left: 2em; */
   float: right;
 }
 
@@ -65,9 +56,6 @@ nav {
 
 
 
-.container > li {
-  /* display: none; */
-}
 
 small {
     font-size: 75%;
@@ -135,17 +123,14 @@ small {
     display: block;
     margin: 0;
     padding: 0;
-    /* border: .2em solid green; */
  height: 2.5em;
  
    }
 
    #logoDeskTop {
-    /* border-radius: 50%; */
     display: block;
     margin: 0;
     padding: 0;
-    /* border: .2em solid green; */
  height: 4em;
    }
    

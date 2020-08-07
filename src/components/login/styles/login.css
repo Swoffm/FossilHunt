@@ -6,7 +6,7 @@
     background-color: var(--form-background-color);
 color: var(--form-login-color);
     width: 25%;
-    /* border: .1em solid var(--form-border); */
+
     border: 0;
     padding-left: 0%;
    text-align: center;
@@ -15,11 +15,10 @@ box-shadow: .2em .2em rgba(252, 252, 252, 0.863);
 }
 
 .forumLogin > fieldset:hover {
-    /* box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61); */
     box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
 }
 
-/* submit button below  */
+
 
 
 

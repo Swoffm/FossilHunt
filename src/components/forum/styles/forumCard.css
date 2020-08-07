@@ -9,7 +9,6 @@ Link {
     display: flex;
     flex-wrap: wrap;
     color: white;
-    /* justify-content: center; */
 }
 .content {
     display: flex;
@@ -28,7 +27,6 @@ box-shadow: .3em .3em .9em rgba(20, 20, 20, 0.61);
 
 }
 .questionChild {
-    /* color: white; */
     background-color: var(--forum-card-background);
 box-shadow: .2em .2em .3em var(--forum-card-shadow);
  font-size: 1.5em;
@@ -42,7 +40,6 @@ box-shadow: .2em .2em .3em var(--forum-card-shadow);
 }
 
  .responseChild {
-    /* border: .1em solid royalblue;  */
     margin: .5em;
 }
 
