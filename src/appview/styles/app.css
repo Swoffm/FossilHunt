@@ -46,6 +46,7 @@ background-color: var(--body--color);
     height: 75%;
     color: var(--form-background-color);
     background-color: var(--button-site-background-color);
+  
 }
 
 .forum--select {

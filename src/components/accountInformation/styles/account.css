@@ -14,13 +14,29 @@ justify-content: center;
 }
 .accountChild > div {
     width: 100%;
-    
 }
-.accountChild > div > button {
-    /* width: 100%; */
-    padding: .2em 10em;
-    background-color: pink;
+.acctbtn {
+   text-align: center;
 }
+.linkPassword {
+    margin: .5em 0;
+}
+
+/* this is the classname for email and username */
+.userInfo {
+    margin: .5em 0;
+    font-size: 1.5em;
+}
+/* ==================title is below h1  */
+.acct--Title {
+    display: flex;
+    justify-content: center;
+}
+.acct--Title > h1 {
+    font-size: 2em;
+    border-bottom: 2px solid black;
+}
+
 
 .userImage-selection {
     margin: .5em 0;
