@@ -1,23 +1,5 @@
 
 
-:root {
-    /* --logo-background-color: #731504; 
-    example 
-    color: var(--logo--white);
-    */
-    /* --fossil-background: #1a1a1a;
-    --fossil-card-background: #262626;
-    --fossil-card-shadow: #333333; */
-
-    --fossil-background: #9c7070;
-    --fossil-card-background: #2b2121;
-    --fossil-card-shadow: #000000;
-    --fossil-card-btn: rgb(255, 255, 255);
-    --fossil-card-font-color:black;
-    --fossil--logo-head-color: #44fb8d;
-
-    
-}
 
 
 .fossil--grandparent {

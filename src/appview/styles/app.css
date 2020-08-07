@@ -1,15 +1,30 @@
 
-
-.appView {
-    /* background-color: #60625A; */
-
-}
-
 :root {
-   --body--color: white;
+  
 
-    
+    --forum-background: #f0efef;
+    --forum-card-background: #ffffff;
+    --forum-card-shadow: #f0ebeb;
+    --forum-card-btn: rgb(255, 255, 255);
+    --forum-card-font-color:rgb(3, 3, 3);
+    --forum--logo-head-color: #44fb8d;
+    --body--color: white;
+    --fossil-background: #9c7070;
+    --fossil-card-background: #2b2121;
+    --fossil-card-shadow: #000000;
+    --fossil-card-btn: rgb(255, 255, 255);
+    --fossil-card-font-color:black;
+    --fossil--logo-head-color: #44fb8d;
+
+    --form-background-color: rgb(235, 231, 231);
+    --form-login-color: black;
+    --form-shadow: black;
+    --form-border: black;
+    --button-site-background-color: black;
 }
+
+
+
 
 body {
 background-color: var(--body--color);
@@ -23,14 +38,14 @@ background-color: var(--body--color);
     width: 5em;
     height: 75%;
     color: var(--form-background-color);
-    background-color: var(--form-login-color);
+    background-color: var(--button-site-background-color);
 }
 
 .forum--select {
     font-size: 1em;
 color: white;
 height: 75%;
-background-color: var(--form-login-color);
+background-color: var(--button-site-background-color);
 border: 0;
 }
 #state {

@@ -1,23 +1,4 @@
 
-
-:root {
-    /* --logo-background-color: #731504; 
-    example 
-    color: var(--logo--white);
-    */
-    /* --forum-background: #1a1a1a;
-    --forum-card-background: #262626;
-    --forum-card-shadow: #333333; */
-
-    --forum-background: #f0efef;
-    --forum-card-background: #ffffff;
-    --forum-card-shadow: #f0ebeb;
-    --forum-card-btn: rgb(255, 255, 255);
-    --forum-card-font-color:rgb(3, 3, 3);
-    --forum--logo-head-color: #44fb8d;
-
-    
-}
 Link {
     color: none;
     text-decoration: none;
