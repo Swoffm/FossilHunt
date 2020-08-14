@@ -26,6 +26,10 @@ import AccountEdit from "../components/accountInformation/accountEdit"
 import PasswordEdit from "../components/accountInformation/PasswordEdit"
 
 
+//import map components
+import FossilFind from "../components/map/fossilFind"
+
+
 const ApplicationView = (props) => {
     let user = sessionStorage.getItem("userInfo")
 
@@ -174,6 +178,17 @@ const ApplicationView = (props) => {
                 path="/account/newpassword"
                 render={props => {
                     return (<PasswordEdit {...props} />
+                    )
+                }}
+            />
+
+
+{/* below is the component for map component */}
+        <Route
+                exact
+                path="/map"
+                render={props => {
+                    return (<FossilFind {...props} />
                     )
                 }}
             />

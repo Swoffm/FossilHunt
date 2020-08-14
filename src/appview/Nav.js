@@ -36,6 +36,10 @@ const FossilNav = (props) => {
                     Fossil Forum
                             </Link>
 
+                            <Link className="nav-link" to="/map">
+                    Fossil Map
+                            </Link>
+
                 {
                     user ? <Link className="nav-link" to="/fossilcollection"> Fossil Collection</Link> : null
                 }
