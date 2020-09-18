@@ -12,8 +12,9 @@
     display: flex;
     justify-content: center;
 }
-.forumQuestion > textarea {
-
+.section-content 
+{
+    margin: .8em .8em;
 }
 
 
