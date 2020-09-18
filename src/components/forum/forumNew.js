@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
 import ForumManager from "./manager/ForumManager"
 import ForumNewJSX from "./pages/forumNewJSX"
 import Helper from "../../HelperFunctions/Helper"
@@ -12,39 +12,39 @@ const ForumNew = (props) => {
 
 
 
-    const [question, setQuestion] = useState({userId: userId})
+    const [question, setQuestion] = useState({ userId: userId })
     const [isLoading, setIsLoading] = useState(false);
 
     const handleFieldChange = evt => {
         const stateToChange = { ...question };
         stateToChange[evt.target.id] = evt.target.value;
         setQuestion(stateToChange);
-      };
+    };
 
-      const newQuestion = evt => {
-          evt.preventDefault();
-          if(question.question === "" || question.location=="" || question.location == null) {
-              window.alert("Please input a question")
-          } 
-          else {
-              setIsLoading(true);
+    const newQuestion = evt => {
+        evt.preventDefault();
+        if (question.question === "" || question.location == "" || question.location == null) {
+            window.alert("Please input a question")
+        }
+        else {
+            setIsLoading(true);
             ForumManager.post(question).then(() => {
                 props.history.push("/forum")
             })
 
-          }
-      }
+        }
+    }
 
-      const backBtn = () => {
+    const backBtn = () => {
         props.history.push("/forum")
     }
 
 
-    return(<>
-    <button className="backQuestion forumbtn" onClick={backBtn}>Back</button>
-    <div className="parentQForum">
-    <ForumNewJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newQuestion={newQuestion} {...props}/>
-    </div>
+    return (<>
+        <button className="backQuestion forumbtn" onClick={backBtn}>Back</button>
+        <div className="parentQForum">
+            <ForumNewJSX backBtn={backBtn} handleFieldChange={handleFieldChange} newQuestion={newQuestion} {...props} />
+        </div>
     </>
     )
 }

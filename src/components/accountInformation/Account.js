@@ -6,7 +6,7 @@ import "./styles/account.css"
 
 const Account = props => {
 
-let userId = Helper.getUserId()
+    let userId = Helper.getUserId()
     const [isLoading, setIsLoading] = useState(false);
     const [user, setUser] = useState([])
 
@@ -16,7 +16,7 @@ let userId = Helper.getUserId()
         })
     }
 
-    const logout =() => {
+    const logout = () => {
         sessionStorage.clear()
         Helper.refreshPage();
     }
@@ -24,17 +24,17 @@ let userId = Helper.getUserId()
 
 
     useEffect(() => {
-       
+
         getUser(userId)
-       
+
     }, [])
 
 
-    return(
-        <section className="accountParent"> 
-        <AccountJSX logout={logout} user={user} {...props}/>
+    return (
+        <section className="accountParent">
+            <AccountJSX logout={logout} user={user} {...props} />
         </section>
-   )
+    )
 }
 
 export default Account

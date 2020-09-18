@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react"
+import React, { useEffect, useState } from "react"
 import ForumManager from "./manager/ForumManager"
 import ForumFilterJSX from "./pages/forumFilterJSX"
 
@@ -10,18 +10,18 @@ const ForumFilter = props => {
      const [FLocation, setFLocation] = useState([])
 
      const getLocation = () => {
-        ForumManager.getAll().then((results) => {
-             setFLocation(results)
-         })
+          ForumManager.getAll().then((results) => {
+               setFLocation(results)
+          })
      }
 
-    
 
-    useEffect(()=> {
-         getLocation()
-    }, [])
 
-    return(<ForumFilterJSX {...props}/>)
+     useEffect(() => {
+          getLocation()
+     }, [])
+
+     return (<ForumFilterJSX {...props} />)
 }
 
 export default ForumFilter
